@@ -1,0 +1,36 @@
+<div class="panel panel-default">
+    <div class="panel-body">
+        <div class="sil-col-5">
+            <div class="form-group">
+                <div class="sil-col-4">
+                    <select ng-model="filterField" class="form-control"
+                            ng-options="filterField for filterField in metadata.filterFields">
+                    </select>
+                </div>
+                <div class="sil-col-7">
+                    <input class="form-control" ng-model="filterValue"
+                            type="text" placeholder="Filter {{resource}}"/>
+                </div>
+                <div class="sil-col-1">
+                    <button type="submit" class="btn btn-success"
+                            ng-click="filterData(filterField, filterValue)">Get Records
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="sil-col-1"></div>
+        <div class="sil-col-6 pull-right">
+            <div class="form-group">
+                <div class="sil-col-10">
+                    <input class="form-control" ng-model="searchParam"
+                            type="text" placeholder="Search {{resource}}"/>
+                </div>
+                <div class="sil-col-1">
+                    <button type="submit" class="btn btn-success"
+                            ng-click="searchData(searchParam)">Search
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

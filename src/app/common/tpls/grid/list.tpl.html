@@ -1,0 +1,29 @@
+<div class="panel-body">
+    <table class="sil-table table-responsive table-hover">
+        <thead>
+            <tr class="bg-light">
+                <th ng-repeat="col in columns">
+                    <grid-table-ordering columns="columns">
+                        <i class="fa fa-sort" ng-if="col.sortable !== ''"
+                                ng-click="orderData(col.sortable, $event)"
+                                id="ordering-icon">
+                        </i>{{col.display}}
+                    </grid-table-ordering>
+                </th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in list">
+                <td ng-repeat="col in columns">
+                    {{item[col.name]  || "not provided" | date: col.date_format | uppercase}}
+                </td>
+                <td ng-if="!_.isEmpty(rowLevelActionsList)">
+                    <row-level-action
+                        row-level-actions-list="rowLevelActionsList">
+                    </row-level-action>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

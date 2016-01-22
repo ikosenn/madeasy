@@ -5,7 +5,12 @@ angular.module("madeasyApp", [
     "ui.bootstrap",
     "templates-app",
     "templates-common",
+    "formly",
+    "formlyBootstrap",
+
+    "sil.alerts.service",
 
     "madeasy.config",
-    "madeasy.common"
+    "madeasy.common",
+    "madeasy.auth"
 ]);

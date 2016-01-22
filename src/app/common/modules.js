@@ -1,6 +1,8 @@
 "use strict";
 
-angular.module("peculiarYak.common", [
-    "madeasy.common.states",
-    "madeasy.common.controller"
+angular.module("madeasy.common", [
+	"madeasy.common.directives",
+	"madeasy.common.routes",
+    "madeasy.common.services",
+    "madeasy.common.controllers"
 ]);

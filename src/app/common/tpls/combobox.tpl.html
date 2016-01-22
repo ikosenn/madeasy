@@ -1,0 +1,19 @@
+<ui-select ng-model="model[options.key]"
+          ng-required="{{to.required}}"
+          ng-disabled="{{to.disabled}}"
+          reset-search-input="false"
+          style="min-width: 100%;">
+    <ui-select-match
+        placeholder="{{to.placeholder}}"> {{$select.selected[to.labels[0]]}}
+    </ui-select-match>
+    <ui-select-choices
+        ng-hide="!$select.open"
+        group-by="to.groupBy"
+        repeat="option[to.valueProp] as option in to.options | filter: $select.search"
+        refresh="refreshResults($select.search)"
+        refresh-delay="0">
+        <span ng-repeat="field in to.labels">
+            {{option[field]}}
+        </span>
+    </ui-select-choices>
+</ui-select>

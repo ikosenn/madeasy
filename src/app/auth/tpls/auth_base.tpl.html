@@ -1,0 +1,26 @@
+<div class="container-fluid login-form" ng-controller="madeasy.auth.controllers.authBase">
+  <div class="mw600 center-block mt110">
+        <!-- Login 1 -->
+        <div class=" theme-primary" id="login1">
+          <div class="panel panel-primary heading-border">
+
+                <div class="panel-body p25 pt10">
+                  <div class="logo text-center mb20 mt20">
+                     <h2>Madeasy</h2>
+                  </div>
+                  <div class="section-divider mv5"></div>
+                  <br>
+                  <div ui-view="form"></div>
+                  <div class="login-footer">
+                      <p>
+                        Copyright &copy; {{year}} <a href="http://madeasy.io" style="color: #772953;">Madeasy</a> <br>
+                      </p>
+                  </div>
+                </div>
+
+          </div>
+          <!-- end .panel-->
+        </div>
+        <!-- end: . -->
+  </div>
+</div>

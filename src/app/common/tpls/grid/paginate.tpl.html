@@ -1,0 +1,42 @@
+<div class="pull-left">
+    <span class="paging-action-buttons">
+        {{paginator.getPageStartIndex()}}&nbsp;-&nbsp;
+        {{paginator.getPageEndIndex()}}&nbsp;of&nbsp;
+        {{paginator.getTotalItemCount()}}&nbsp;
+        items&nbsp;|&nbsp;
+        {{paginator.getItemCountPerPage()}}&nbsp;
+        Items&nbsp;
+        per&nbsp;
+        page&nbsp;
+    </span>
+    <span class="page-label">
+        Page&nbsp;
+        {{paginator.getCurrentPage()}}&nbsp;of&nbsp;
+        {{paginator.getTotalPages()}}&nbsp;
+    </span>
+</div>
+<div class="pull-right">
+    <ul class="pagination mtn">
+        <li class="paginate_button first" ng-click="firstPage()">
+            <a id="first">
+                <i class="fa fa-angle-double-left"></i>
+            </a>
+        </li>
+        <li class="paginate_button previous" ng-click="previousPage()">
+            <a id="previous">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        </li>
+
+        <li class="paginate_button next" ng-click="nextPage()">
+            <a>
+                <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+        <li class="paginate_button last" ng-click="lastPage()">
+            <a id="last">
+                <i class="fa fa-angle-double-right"></i>
+            </a>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,141 @@
+/**
+*===============================
+* Mixin classes for zen stying
+*===============================
+*/
+// .madeasy-table {
+//   @extend .table;
+//   .fs13;
+// }
+// .madeasy-tbl-btn{
+// 	&:extend(.btn all);
+// 	&:extend(.btn-sm all);
+// }
+// .madeasy-alert-success{
+// 	&:extend(.alert all);
+// 	&:extend(.alert-success all);
+// }
+//
+//
+// /**madeasy Utility mixins**/
+// .madeasy-col-1{
+// 	&:extend(.col-sm-1 all);
+// 	&:extend(.col-md-1 all);
+// 	&:extend(.col-lg-1 all);
+// }
+// .madeasy-col-2{
+// 	&:extend(.col-sm-2 all);
+// 	&:extend(.col-md-2 all);
+// 	&:extend(.col-lg-2 all);
+// }
+// .madeasy-col-3{
+// 	&:extend(.col-sm-3 all);
+// 	&:extend(.col-md-3 all);
+// 	&:extend(.col-lg-3 all);
+// }
+// .madeasy-col-4{
+// 	&:extend(.col-sm-4 all);
+// 	&:extend(.col-md-4 all);
+// 	&:extend(.col-lg-4 all);
+// }
+// .madeasy-col-5{
+// 	&:extend(.col-sm-5 all);
+// 	&:extend(.col-md-5 all);
+// 	&:extend(.col-lg-5 all);
+// }
+// .madeasy-col-6{
+// 	&:extend(.col-sm-6 all);
+// 	&:extend(.col-md-6 all);
+// 	&:extend(.col-lg-6 all);
+// }
+// .madeasy-col-7{
+// 	&:extend(.col-sm-7 all);
+// 	&:extend(.col-md-7 all);
+// 	&:extend(.col-lg-7 all);
+// }
+// .madeasy-col-8{
+// 	&:extend(.col-sm-8 all);
+// 	&:extend(.col-md-8 all);
+// 	&:extend(.col-lg-8 all);
+// }
+// .madeasy-col-9{
+// 	&:extend(.col-sm-9 all);
+// 	&:extend(.col-md-9 all);
+// 	&:extend(.col-lg-9 all);
+// }
+// .madeasy-col-10{
+// 	&:extend(.col-sm-10 all);
+// 	&:extend(.col-md-10 all);
+// 	&:extend(.col-lg-10 all);
+// }
+// .madeasy-col-11{
+// 	&:extend(.col-sm-11 all);
+// 	&:extend(.col-md-11 all);
+// 	&:extend(.col-lg-11 all);
+// }
+// .madeasy-col-12{
+// 	&:extend(.col-sm-12 all);
+// 	&:extend(.col-md-12 all);
+// 	&:extend(.col-lg-12 all);
+// }
+// // offset mixin
+// .madeasy-col-offset-1{
+// 	&:extend(.col-sm-offset-1 all);
+// 	&:extend(.col-md-offset-1 all);
+// 	&:extend(.col-lg-offset-1 all);
+// }
+// .madeasy-col-offset-2{
+// 	&:extend(.col-sm-offset-2 all);
+// 	&:extend(.col-md-offset-2 all);
+// 	&:extend(.col-lg-offset-2 all);
+// }
+// .madeasy-col-offset-3{
+// 	&:extend(.col-sm-offset-3 all);
+// 	&:extend(.col-md-offset-3 all);
+// 	&:extend(.col-lg-offset-3 all);
+// }
+// .madeasy-col-offset-4{
+// 	&:extend(.col-sm-offset-4 all);
+// 	&:extend(.col-md-offset-4 all);
+// 	&:extend(.col-lg-offset-4 all);
+// }
+// .madeasy-col-offset-5{
+// 	&:extend(.col-sm-offset-5 all);
+// 	&:extend(.col-md-offset-5 all);
+// 	&:extend(.col-lg-offset-5 all);
+// }
+// .madeasy-col-offset-6{
+// 	&:extend(.col-sm-offset-6 all);
+// 	&:extend(.col-md-offset-6 all);
+// 	&:extend(.col-lg-offset-6 all);
+// }
+// .madeasy-col-offset-7{
+// 	&:extend(.col-sm-offset-7 all);
+// 	&:extend(.col-md-offset-7 all);
+// 	&:extend(.col-lg-offset-7 all);
+// }
+// .madeasy-col-offset-8{
+// 	&:extend(.col-sm-offset-8 all);
+// 	&:extend(.col-md-offset-8 all);
+// 	&:extend(.col-lg-offset-8 all);
+// }
+// .madeasy-col-offset-9{
+// 	&:extend(.col-sm-offset-9 all);
+// 	&:extend(.col-md-offset-9 all);
+// 	&:extend(.col-lg-offset-9 all);
+// }
+// .madeasy-col-offset-10{
+// 	&:extend(.col-sm-offset-10 all);
+// 	&:extend(.col-md-offset-10 all);
+// 	&:extend(.col-lg-offset-10 all);
+// }
+// .madeasy-col-offset-11{
+// 	&:extend(.col-sm-offset-11 all);
+// 	&:extend(.col-md-offset-11 all);
+// 	&:extend(.col-lg-offset-11 all);
+// }
+// .madeasy-col-offset-12{
+// 	&:extend(.col-sm-offset-12 all);
+// 	&:extend(.col-md-offset-12 all);
+// 	&:extend(.col-lg-offset-12 all);
+// }

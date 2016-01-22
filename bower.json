@@ -27,7 +27,13 @@
     "angular": "~1.4.7",
     "angular-bootstrap": "~0.13.4",
     "angular-ui-router": "~0.2.15",
-    "bootstrap": "~3.3.5",
-    "fontawesome": "~4.4.0"
+    "bootstrap": "~3.3.6",
+    "fontawesome": "~4.4.0",
+    "angular-formly": "~7.3.9",
+    "angular-formly-templates-bootstrap": "~6.2.0",
+    "api-check": "~7.5.5",
+    "underscore": "~1.8.3",
+    "sil-alerts": "https://bower.slade360.co.ke/getpackage/sil-alerts__1.0.0.tar.gz",
+    "angular-toastr": "~1.5.0"
   }
 }

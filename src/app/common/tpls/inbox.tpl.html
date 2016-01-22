@@ -1,0 +1,18 @@
+<div class="media">
+    <div class="media-left">
+      <a ng-if="msg.message_type === 'PATIENT'" class="media-left"
+          ui-sref="patients.detail.billing({patient_id: msg.item_id})">
+        <i class="fa fa-info-circle"></i>
+      </a>
+      <a ng-if="msg.message_type === 'VISIT'" class="media-left"
+            ui-sref="visits.detail.summary({visit_id: msg.item_id})">
+          <i class="fa fa-info-circle"></i>
+      </a>
+    </div>
+    <div class="media-body">
+      <span class="media-status online"></span>
+      <h5 class="media-heading">{{msg.user_details.first_name}} {{msg.user_details.last_name}}
+        <small> {{ msg.created | date:'MMMM dd'}}</small>
+      </h5>{{msg.contentString }}
+    </div>
+</div>

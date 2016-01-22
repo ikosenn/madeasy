@@ -71,11 +71,19 @@ module.exports = {
         js: [
             "vendor/jquery/dist/jquery.js",
             "vendor/angular/angular.js",
+            "vendor/underscore/underscore.js",
             "vendor/bootstrap/dist/js/bootstrap.js",
             "vendor/angular-resource/angular-resource.js",
             "vendor/angular-animate/angular-animate.js",
+            "vendor/api-check/dist/api-check.js",
             "vendor/angular-ui-router/release/angular-ui-router.js",
+            "vendor/angular-formly/dist/formly.js",
+            "vendor/angular-formly-templates-bootstrap/dist/" +
+            "angular-formly-templates-bootstrap.js",
             "vendor/angular-bootstrap/ui-bootstrap.js",
+            "vendor/sil-alerts/src/sil-alerts.js",
+            "vendor/angular-toastr/dist/angular-toastr.js",
+            "vendor/angular-toastr/dist/angular-toastr.tpls.js",
             "vendor/angular-bootstrap/ui-bootstrap-tpls.js"
         ],
         css: [

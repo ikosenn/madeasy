@@ -1,0 +1,50 @@
+<div class="sil-col-12 mb20 mt10 pln prn">
+    <div class="sil-col-5 pln">
+        <h4>Available {{title}}</h4>
+        <div class="group mt20 mb20">
+            <label>
+                Search Available {{title}}:
+            </label>
+            <div>
+                <input type="search" ng-model="search.available_query" class="form-control" placeholder="Enter {{title}}...">
+            </div>
+        </div>
+
+        <ul class="nav nav-pills nav-stacked perm-container mb20" >
+            <li ng-repeat="item in filtered_items | filter: search.available_query"
+                 ng-class="{active : item.selected}"  >
+                <a href ng-click="clickedItem(item)">{{item[displayAttr]}}</a>
+            </li>
+            <li ng-show="(filtered_items | filter: search.available_query).length == 0">
+                    No {{title}} By That Name
+            </li>
+        </ul>
+    </div>
+    <div class="sil-col-2 perm-divider">
+        <span class="text-primary" ng-click="addItems()">
+            <i class="fa fa-long-arrow-right fa-2x"></i>
+        </span>
+        <br>
+        <span class="text-primary" ng-click="revertItems()">
+            <i class="fa fa-long-arrow-left fa-2x"></i>
+        </span>
+    </div>
+    <div class="sil-col-5 prn">
+        <h4>Assigned {{title}}</h4>
+        <div class="group mt20 mb20">
+            <label>
+                Search Assigned {{title}}:
+            </label>
+            <input type="search" ng-model="search.assigned_query" class="form-control" placeholder="Enter {{title}}...">
+        </div>
+        <ul class="nav nav-pills nav-stacked perm-container mb20" >
+            <span ng-hide="assigneditems.length">
+                <p class="fs-16 lead ml5"><i class="fa fa-info-circle"></i> Nothing assigned yet</p>
+            </span>
+            <li ng-repeat="set_item in assigneditems | filter: search.assigned_query"
+            ng-class="{active : set_item.set_selected}">
+                <a href ng-click="setItem(set_item)">{{set_item.name}}</a>
+            </li>
+        </ul>
+    </div>
+</div>

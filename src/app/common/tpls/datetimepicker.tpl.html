@@ -1,0 +1,6 @@
+<p class="input-group">
+    <input type="text" class="form-control" id="{{::id}}" name="{{::id}}" ng-click="openDateTimePicker($event, prop)" datetime-picker="dd-MM-yyyy HH:mm" ng-model="model[options.key]" is-open="isOpen"  />
+    <span class="input-group-btn">
+        <button type="button" class="btn btn-glyphicon btn-default" ng-click="openDateTimePicker($event, prop)"><i class="glyphicon glyphicon-calendar"></i></button>
+    </span>
+</p>
