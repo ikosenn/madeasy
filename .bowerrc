@@ -1,4 +1,6 @@
 {
+   "registry": "https://kosen:privaterepo6@bower.ikosenn.me",
+    "timeout": 300000,
     "directory": "vendor/",
     "json": "bower.json"
 }

@@ -102,7 +102,7 @@ module.exports = {
     connect : {
         options: {
             port: 9999,
-            hostname: "*",
+            hostname: "0.0.0.0",
             keepalive: true,
             middleware: function (connect, options, middlewares) {
                 var modRewrite = require("connect-modrewrite");
