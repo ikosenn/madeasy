@@ -186,11 +186,11 @@ ul.social-buttons li a {
 }
 
 img::selection {
-  background: transparent;
+  background: rgba(255, 255, 255, 0);
 }
 
 img::-moz-selection {
-  background: transparent;
+  background: rgba(255, 255, 255, 0);
 }
 
 body {
@@ -248,7 +248,7 @@ body {
 
 .navbar-default {
   background-color: #FFF;
-  border-color: transparent;
+  border-color: rgba(255, 255, 255, 0);
   margin-bottom: 0;
 }
 
@@ -323,7 +323,7 @@ and (orientation : portrait) {
 .navbar-default .navbar-nav > .active > a {
   border-radius: 0;
   color: #666;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .navbar-default .navbar-nav > .active > a:hover,
@@ -337,7 +337,7 @@ and (orientation : portrait) {
     z-index: 150;
     position: absolute;
     width: 100%;
-    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0);
     padding: 25px 0 25px;
     border: none;
     transition: top ease 0.2s;
@@ -410,7 +410,7 @@ and (orientation : portrait) {
   .navbar-default.navbar-shrink .nav li a:hover,
   .navbar-default.navbar-shrink .nav li a:focus {
     color: #333;
-    background: transparent;
+    background: rgba(255, 255, 255, 0);
   }
 
   .navbar-default.navbar-shrink .navbar-nav > .active > a {
@@ -421,7 +421,7 @@ and (orientation : portrait) {
   .navbar-default.navbar-shrink .navbar-nav > .active > a:hover,
   .navbar-default.navbar-shrink .navbar-nav > .active > a:focus {
     color: #333;
-    background: transparent;
+    background: rgba(255, 255, 255, 0);
   }
 
   .navbar-default.navbar-shrink .navbar-nav > .active > a:after {

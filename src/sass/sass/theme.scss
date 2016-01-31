@@ -58,7 +58,7 @@ ul.fancytree-container {
   padding: 0;
   border: 0;
   outline: 0;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 /*fancytree items */
@@ -201,7 +201,7 @@ table.fancytree-ext-columnview tbody tr #preview {
   border: none;
   box-shadow: none;
   outline: none;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0);
   padding: 0;
   margin: 0;
   width: auto !important;
@@ -655,8 +655,8 @@ body.panel-fullscreen-active #content_wrapper {
   padding: 6px 20px 10px;
   color: #FFF !important;
   color: rgba(255, 255, 255, 0.7) !important;
-  border-left-color: transparent !important;
-  border-right-color: transparent !important;
+  border-left-color: rgba(255, 255, 255, 0) !important;
+  border-right-color: rgba(255, 255, 255, 0) !important;
 }
 
 .panel.panel-primary .panel-tabs > li > a:hover,
@@ -741,8 +741,8 @@ body.panel-fullscreen-active #content_wrapper {
 }
 
 .panel.mobile-controls .panel-controls + .popover .panel-controls {
-  background: transparent !important;
-  border-color: transparent !important;
+  background: rgba(255, 255, 255, 0) !important;
+  border-color: rgba(255, 255, 255, 0) !important;
 }
 
 .action-toolbar {
@@ -762,7 +762,7 @@ Source: https://github.com/h5bp/html5-boilerplate/blob/master/css/main.css
   * {
     text-shadow: none !important;
     color: #000 !important;
-    background: transparent !important;
+    background: rgba(255, 255, 255, 0) !important;
     box-shadow: none !important;
   }
 
@@ -1477,7 +1477,7 @@ pre code {
   font-size: inherit;
   color: inherit;
   white-space: pre-wrap;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0);
   border-radius: 0;
 }
 
@@ -2729,7 +2729,7 @@ Grid System
 Tables
 ================================================= */
 table {
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0);
   font-size: 14px;
 }
 
@@ -3637,7 +3637,7 @@ Input Hero - Used on FAQ and ui-icons page
   top: 10px;
   left: 13px;
   border: 0;
-  background: transparent;
+  background: rgba(255, 255, 255, 0);
   z-index: 3;
   font-size: 18px;
 }
@@ -3692,7 +3692,7 @@ Buttons
   vertical-align: middle;
   cursor: pointer;
   background-image: none;
-  border: 1px solid transparent;
+  border: 1px solid rgba(255, 255, 255, 0);
   border-color: rgba(0, 0, 0, 0.07) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.18);
   white-space: nowrap;
   padding: 9px 12px;
@@ -3762,7 +3762,7 @@ fieldset[disabled] .btn {
 .btn-link:active,
 .btn-link[disabled],
 fieldset[disabled] .btn-link {
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0);
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -3771,14 +3771,14 @@ fieldset[disabled] .btn-link {
 .btn-link:hover,
 .btn-link:focus,
 .btn-link:active {
-  border-color: transparent;
+  border-color: rgba(255, 255, 255, 0);
 }
 
 .btn-link:hover,
 .btn-link:focus {
   color: #1d6fa5;
   text-decoration: underline;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .btn-link[disabled]:hover,
@@ -3975,8 +3975,8 @@ Dropdown menus
   margin-left: 2px;
   vertical-align: middle;
   border-top: 4px solid;
-  border-right: 4px solid transparent;
-  border-left: 4px solid transparent;
+  border-right: 4px solid rgba(255, 255, 255, 0);
+  border-left: 4px solid rgba(255, 255, 255, 0);
 }
 
 .caret.caret-tp {
@@ -4085,7 +4085,7 @@ Dropdown menus
 .dropdown-menu > .disabled > a:hover,
 .dropdown-menu > .disabled > a:focus {
   text-decoration: none;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0);
   background-image: none;
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   cursor: not-allowed;
@@ -4595,7 +4595,7 @@ Navs
 .nav > li.disabled > a:focus {
   color: #777777;
   text-decoration: none;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0);
   cursor: not-allowed;
 }
 
@@ -4629,7 +4629,7 @@ Navs
 .nav-tabs > li > a {
   margin-right: 2px;
   line-height: 1.49;
-  border: 1px solid transparent;
+  border: 1px solid rgba(255, 255, 255, 0);
   border-radius: 4px 4px 0 0;
 }
 
@@ -4641,9 +4641,9 @@ Navs
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
   color: #555555;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0);
   border: 1px solid #dddddd;
-  border-bottom-color: transparent;
+  border-bottom-color: rgba(255, 255, 255, 0);
   cursor: default;
 }
 
@@ -4732,7 +4732,7 @@ Navs
 .nav-pills > li.active > a:focus {
   color: #FFF;
   background-color: #3498db;
-  border: 1px solid transparent;
+  border: 1px solid rgba(255, 255, 255, 0);
   border-color: rgba(0, 0, 0, 0.07) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.18);
 }
 
@@ -4780,7 +4780,7 @@ Navs
   color: #666;
   font-weight: 600;
   background-color: #eee;
-  border-bottom-color: transparent;
+  border-bottom-color: rgba(255, 255, 255, 0);
 }
 
 @media (max-width:800px) {
@@ -4900,7 +4900,7 @@ Navs
 
 .nav-list li a {
   color: #AAA;
-  border-bottom: 3px solid transparent;
+  border-bottom: 3px solid rgba(255, 255, 255, 0);
 }
 
 .nav-list li a:hover,
@@ -4919,7 +4919,7 @@ Navbars
   position: relative;
   min-height: 50px;
   margin-bottom: 19px;
-  border: 1px solid transparent;
+  border: 1px solid rgba(255, 255, 255, 0);
 }
 
 @media (min-width:480px) {
@@ -4940,7 +4940,7 @@ Navbars
   overflow-x: visible;
   padding-right: 11px;
   padding-left: 11px;
-  border-top: 1px solid transparent;
+  border-top: 1px solid rgba(255, 255, 255, 0);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
   -webkit-overflow-scrolling: touch;
 }
@@ -5077,9 +5077,9 @@ Navbars
   padding: 9px 10px;
   margin-top: 8px;
   margin-bottom: 8px;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0);
   background-image: none;
-  border: 1px solid transparent;
+  border: 1px solid rgba(255, 255, 255, 0);
   border-radius: 4px;
 }
 
@@ -5121,7 +5121,7 @@ Navbars
     float: none;
     width: auto;
     margin-top: 0;
-    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0);
     border: 0;
     box-shadow: none;
   }
@@ -5180,8 +5180,8 @@ Navbars
   margin-left: -11px;
   margin-right: -11px;
   padding: 10px 11px;
-  border-top: 1px solid transparent;
-  border-bottom: 1px solid transparent;
+  border-top: 1px solid rgba(255, 255, 255, 0);
+  border-bottom: 1px solid rgba(255, 255, 255, 0);
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
   margin-top: 5.5px;
@@ -5327,7 +5327,7 @@ Navbars
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
   color: #5e5e5e;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .navbar-default .navbar-text {
@@ -5341,7 +5341,7 @@ Navbars
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
   color: #333333;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .navbar-default .navbar-nav > .active > a,
@@ -5355,7 +5355,7 @@ Navbars
 .navbar-default .navbar-nav > .disabled > a:hover,
 .navbar-default .navbar-nav > .disabled > a:focus {
   color: #cccccc;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .navbar-default .navbar-toggle {
@@ -5391,7 +5391,7 @@ Navbars
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
     color: #333333;
-    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0);
   }
 
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
@@ -5405,7 +5405,7 @@ Navbars
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus {
     color: #cccccc;
-    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0);
   }
 
 }
@@ -5446,7 +5446,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 .navbar-inverse .navbar-brand:hover,
 .navbar-inverse .navbar-brand:focus {
   color: #ffffff;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .navbar-inverse .navbar-text {
@@ -5460,7 +5460,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 .navbar-inverse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li > a:focus {
   color: #ffffff;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .navbar-inverse .navbar-nav > .active > a,
@@ -5474,7 +5474,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 .navbar-inverse .navbar-nav > .disabled > a:hover,
 .navbar-inverse .navbar-nav > .disabled > a:focus {
   color: #444444;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .navbar-inverse .navbar-toggle {
@@ -5518,7 +5518,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover,
   .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus {
     color: #ffffff;
-    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0);
   }
 
   .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a,
@@ -5532,7 +5532,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:hover,
   .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:focus {
     color: #444444;
-    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0);
   }
 
 }
@@ -5996,7 +5996,7 @@ Alerts
 }
 
 .alert.alert-border {
-  border: 1px solid transparent;
+  border: 1px solid rgba(255, 255, 255, 0);
 }
 
 .alert.alert-border-right {
@@ -6088,9 +6088,9 @@ Progress Bars
 
 .progress-striped .progress-bar,
 .progress-bar-striped {
-  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 0));
+  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 0));
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 0));
   background-size: 40px 40px;
 }
 
@@ -6109,7 +6109,7 @@ Progress Bars
 .progress-bar[aria-valuenow="0"] {
   color: #777777;
   min-width: 30px;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0);
   background-image: none;
   box-shadow: none;
 }
@@ -6365,7 +6365,7 @@ a.list-group-item:focus {
 .list-group.list-group-links .list-group-item {
   color: #AAA;
   font-weight: 600;
-  background: transparent;
+  background: rgba(255, 255, 255, 0);
   border: 0;
   padding: 8px 9px;
 }
@@ -6420,7 +6420,7 @@ Panels
   border: 0px;
 }
 
-.panel.panel-transparent {
+.panel.panel-rgba(255, 255, 255, 0) {
   background: none;
   border: 0;
   margin: 0;
@@ -6451,7 +6451,7 @@ Panels
 .panel.panel-border > .panel-heading {
   background-color: #fafafa;
   border-color: #e2e2e2;
-  border-top: 1px solid transparent;
+  border-top: 1px solid rgba(255, 255, 255, 0);
 }
 
 .panel.panel-border > .panel-heading > .panel-title {
@@ -6463,7 +6463,7 @@ Panels
 }
 
 .panel.panel-border.panel-default > .panel-heading {
-  border-top: 1px solid transparent;
+  border-top: 1px solid rgba(255, 255, 255, 0);
 }
 
 .panel-menu {
@@ -6927,7 +6927,7 @@ Close Icons
 button.close {
   padding: 0;
   cursor: pointer;
-  background: transparent;
+  background: rgba(255, 255, 255, 0);
   border: 0;
   -webkit-appearance: none;
 }
@@ -7064,7 +7064,7 @@ Tab Navigation - Tabs Left
   padding: 14px 16px;
   color: #777;
   font-weight: 600;
-  border: 1px solid transparent;
+  border: 1px solid rgba(255, 255, 255, 0);
   border-color: #DDD;
   background: #fafafa;
 }
@@ -7101,7 +7101,7 @@ Tab Navigation - Tabs Right
   padding: 14px 16px;
   color: #777;
   font-weight: 600;
-  border: 1px solid transparent;
+  border: 1px solid rgba(255, 255, 255, 0);
   border-color: #DDD;
   background: #fafafa;
 }
@@ -7187,14 +7187,14 @@ Panel Tab Navigation must be placed inside
   line-height: 30px;
   padding: 9px 20px 11px;
   border-radius: 0;
-  border-left: 1px solid transparent;
-  border-right: 1px solid transparent;
+  border-left: 1px solid rgba(255, 255, 255, 0);
+  border-right: 1px solid rgba(255, 255, 255, 0);
 }
 
 /* nav tab item link:hover */
 .panel-tabs > li > a:hover {
   color: #444;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 /* nav tab item active link:focus:hover */
@@ -7213,7 +7213,7 @@ Panel Tab Navigation must be placed inside
 }
 
 .panel-tabs > li.active:last-child > a {
-  border-right-color: transparent;
+  border-right-color: rgba(255, 255, 255, 0);
 }
 
 /* Unlike normal tabs, panel tabs alignment
@@ -7223,7 +7223,7 @@ Panel Tab Navigation must be placed inside
 }
 
 .panel-tabs-left > li.active:first-child > a {
-  border-left-color: transparent;
+  border-left-color: rgba(255, 255, 255, 0);
 }
 
 .panel-tabs-left > li.active:last-child > a {
@@ -7374,7 +7374,7 @@ Used primarily in sidebars
 
 .tab-block.sidebar-block .tab-content {
   border: 0;
-  background: transparent;
+  background: rgba(255, 255, 255, 0);
 }
 
 /*===============================================
@@ -7572,7 +7572,7 @@ Switches - Created with Pure CSS, no js required
 div.switch label {
   display: block;
   position: relative;
-  color: transparent;
+  color: rgba(255, 255, 255, 0);
   background: #ddd;
   text-indent: 100%;
   width: 52px;
@@ -7629,7 +7629,7 @@ div.switch input:checked + label:after {
 }
 
 div.switch label {
-  color: transparent;
+  color: rgba(255, 255, 255, 0);
   background: #dddddd;
 }
 
@@ -7719,7 +7719,7 @@ Radios and Checkboxes
 ==================================================== */
 .radio-custom,
 .checkbox-custom {
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0);
   color: inherit;
 }
 
@@ -8267,7 +8267,7 @@ ol.timeline-list li.timeline-item .timeline-date {
   left: 0;
   width: 3px;
   height: 100%;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .task-widget ul.task-list .task-item .task-handle .checkbox-custom label {
@@ -8452,7 +8452,7 @@ ol.timeline-list li.timeline-item .timeline-date {
   top: 12px;
   width: 0;
   height: 0;
-  border-color: transparent;
+  border-color: rgba(255, 255, 255, 0);
   border-style: solid;
   border-width: 8px 0px 8px 9px;
   border-left-color: #777;
@@ -8470,7 +8470,7 @@ ol.timeline-list li.timeline-item .timeline-date {
   top: 12px;
   width: 0;
   height: 0;
-  border-color: transparent;
+  border-color: rgba(255, 255, 255, 0);
   border-style: solid;
   border-width: 8px 9px 8px 0px;
   border-right-color: #777;
@@ -8784,7 +8784,7 @@ Popovers
   display: block;
   width: 0;
   height: 0;
-  border-color: transparent;
+  border-color: rgba(255, 255, 255, 0);
   border-style: solid;
 }
 
@@ -8959,9 +8959,9 @@ Utility Classes
 
 .text-hide {
   font: 0/0 a;
-  color: transparent;
+  color: rgba(255, 255, 255, 0);
   text-shadow: none;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0);
   border: 0;
 }
 
@@ -9779,7 +9779,7 @@ body.sidebar-collapsed #sidebar:before {
   padding: 0;
   margin-top: 10px;
   border-radius: 2px;
-  border-top: 3px solid transparent;  /* Dropdown Links */
+  border-top: 3px solid rgba(255, 255, 255, 0);  /* Dropdown Links */
 
   /* Dropdown Top Arrow */
 }
@@ -9793,7 +9793,7 @@ body.sidebar-collapsed #sidebar:before {
   position: absolute;
   width: 0;
   height: 0;
-  border-color: transparent;
+  border-color: rgba(255, 255, 255, 0);
   border-style: solid;
   right: 11px;
   bottom: 100%;
@@ -9950,7 +9950,7 @@ Navbar Advanced Dropdown - Button Dropdowns
   padding: 0;
   margin-top: 25px;
   border-radius: 2px;
-  border-top: 3px solid transparent;
+  border-top: 3px solid rgba(255, 255, 255, 0);
 }
 
 .navbar .nav > li.dropdown > .open .dropdown-menu:after {
@@ -9958,7 +9958,7 @@ Navbar Advanced Dropdown - Button Dropdowns
   position: absolute;
   width: 0;
   height: 0;
-  border-color: transparent;
+  border-color: rgba(255, 255, 255, 0);
   border-style: solid;
   right: 11px;
   bottom: 100%;
@@ -9970,7 +9970,7 @@ Navbar Advanced Dropdown - Button Dropdowns
 .navbar[class*='bg-'] .navbar-btn.btn-group > .btn {
   color: #BBB;
   color: rgba(255, 255, 255, 0.8);
-  border-color: transparent;
+  border-color: rgba(255, 255, 255, 0);
   background-color: #f2f2f2;
   background-color: rgba(255, 255, 255, 0.2);
 }
@@ -10139,7 +10139,7 @@ Navbar Branding - Logo/Text
   width: 260px;
   height: 60px;
   margin-right: 10px;
-  background-color: transparent;  /* Logo */
+  background-color: rgba(255, 255, 255, 0);  /* Logo */
 }
 
 .navbar-branding .navbar-brand {
@@ -10656,7 +10656,7 @@ Navbar Contextual/Skin Settings
  * several elements so there are not color conflictions
  */
 .navbar[class*='bg-'] {
-  border-bottom-color: transparent;
+  border-bottom-color: rgba(255, 255, 255, 0);
   box-shadow: none;  /* Disable navbar shadow option for navbar bgs */
 }
 
@@ -10697,7 +10697,7 @@ Navbar Contextual/Skin Settings
 
 .navbar[class*='bg-'] .navbar-search input,
 .navbar[class*='bg-'] .navbar-search input:focus {
-  border-color: transparent;
+  border-color: rgba(255, 255, 255, 0);
 }
 
 .navbar[class*='bg-'] .navbar-search.alt input {
@@ -10705,15 +10705,15 @@ Navbar Contextual/Skin Settings
   color: rgba(255, 255, 255, 0.8);
   background-color: #BBB;
   background-color: rgba(255, 255, 255, 0.2);
-  border-color: transparent;
+  border-color: rgba(255, 255, 255, 0);
 }
 
 .navbar[class*='bg-'] .navbar-search.alt input:focus {
-  border-color: transparent;
+  border-color: rgba(255, 255, 255, 0);
 }
 
 .navbar[class*='bg-'].navbar-shadow {
-  border-bottom: 1px solid transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0);
   box-shadow: none;
 }
 
@@ -11250,8 +11250,8 @@ ul.tray-nav.tray-nav-arrow li.active a:after {
   vertical-align: middle;
   border-left: 20px solid;
   border-left-color: #fbfbfb;
-  border-top: 20px solid transparent;
-  border-bottom: 20px solid transparent;
+  border-top: 20px solid rgba(255, 255, 255, 0);
+  border-bottom: 20px solid rgba(255, 255, 255, 0);
   transition: all 0.3s ease;
 }
 
@@ -11278,18 +11278,18 @@ ul.tray-nav.tray-nav-arrow li:hover a:after {
   left: auto;
   right: 100%;
   border-right: 20px solid;
-  border-left-color: transparent;
+  border-left-color: rgba(255, 255, 255, 0);
   border-right-color: #fbfbfb;
 }
 
 .tray-right ul.tray-nav.tray-nav-arrow li.active a:before {
-  border-left-color: transparent;
+  border-left-color: rgba(255, 255, 255, 0);
   border-right-color: #888;
 }
 
 /* item hover */
 .tray-right ul.tray-nav.tray-nav-arrow li:hover a:after {
-  border-left-color: transparent;
+  border-left-color: rgba(255, 255, 255, 0);
   border-right-color: #f8f8f8;
 }
 
@@ -11622,8 +11622,8 @@ A. Default Open State
   top: 45%;
   right: 15px;
   border-top: 5px solid;
-  border-right: 5px solid transparent;
-  border-left: 5px solid transparent;
+  border-right: 5px solid rgba(255, 255, 255, 0);
+  border-left: 5px solid rgba(255, 255, 255, 0);
 }
 
 /* Open Menu Item Caret - we simply flip the carets border */
@@ -12320,8 +12320,8 @@ D. Sidebar Widgets
   height: 22px;
   padding: 3px;
   font-size: 14px;
-  border-color: transparent;
-  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0);
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .sidebar-widget.search-widget input {
@@ -12420,7 +12420,7 @@ body.sb-l-m .sidebar-menu > li > a > .sidebar-title {
   font-size: 14px;
   padding-left: 15px;
   border-left: 1px solid #222;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 /* Menus have been converted to show only on:hover. Hide by default */
@@ -12590,19 +12590,19 @@ F. Sidebar Default Color Settings
 .sidebar-menu > li > a:focus,
 .sidebar-menu > li > a:active {
   color: inherit;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 /* Top Level Item - Border Color:hover */
 .sidebar-menu > li:hover > a:after,
 .sidebar-menu > li:focus > a:after {
-  background: transparent;
+  background: rgba(255, 255, 255, 0);
 }
 
 /* Top Level Active Menu Item - BG/Text Color */
 .sidebar-menu > li.active > a {
   color: #ffffff;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 /* Top Level Active Menu Item - Icon Color */
@@ -12613,7 +12613,7 @@ F. Sidebar Default Color Settings
 /* Top Level Active Item - Border Color */
 .sidebar-menu > li.active > a:after,
 .sidebar-menu > li > a.menu-open:after {
-  background: transparent;
+  background: rgba(255, 255, 255, 0);
 }
 
 /* Sub-Menu Item - BG Color */
@@ -12630,7 +12630,7 @@ F. Sidebar Default Color Settings
 .sidebar-menu > li > ul > li > a:hover,
 .sidebar-menu > li > ul > li > a:focus {
   color: inherit;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 /* Sub-Menu Item - Border Color:hover */
@@ -12642,7 +12642,7 @@ F. Sidebar Default Color Settings
 /* Sub-Menu Active Item - BG/Text Color */
 .sidebar-menu > li > ul > li.active > a {
   color: #ffffff;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 /* Sub-Menu Active Item - Icon Color */
@@ -12671,7 +12671,7 @@ F. Sidebar Default Color Settings
 .sidebar-menu > li > ul > li > ul > li > a:hover,
 .sidebar-menu > li > ul > li > ul > li > a:focus {
   color: inherit;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 /* Multi-level Active Item - Border Color:hover */
@@ -12683,7 +12683,7 @@ F. Sidebar Default Color Settings
 /* Multi-level Active Item - BG/Text Color */
 .sidebar-menu > li > ul > li > ul > li.active > a {
   color: #ffffff;
-  background: transparent;
+  background: rgba(255, 255, 255, 0);
 }
 
 /* Multi-level Active Item - Icon Color */
@@ -12739,7 +12739,7 @@ G. Sidebar Light Color Settings
 #sidebar_left.sidebar-light .sidebar-menu > li > a:hover,
 #sidebar_left.sidebar-light .sidebar-menu > li > a:focus,
 #sidebar_left.sidebar-light .sidebar-menu > li > a:active {
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 #sidebar_left.sidebar-light .sidebar-menu > li > a > span:nth-child(1) {
@@ -12773,7 +12773,7 @@ G. Sidebar Light Color Settings
 
 #sidebar_left.sidebar-light .sidebar-menu > li > ul > li > a:hover,
 #sidebar_left.sidebar-light .sidebar-menu > li > ul > li > a:focus {
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 #sidebar_left.sidebar-light .sidebar-menu > li > ul > li.active > a > span:nth-child(1),
@@ -12788,12 +12788,12 @@ G. Sidebar Light Color Settings
 
 #sidebar_left.sidebar-light .sidebar-menu > li > ul > li > ul > li > a:hover,
 #sidebar_left.sidebar-light .sidebar-menu > li > ul > li > ul > li > a:focus {
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 #sidebar_left.sidebar-light .sidebar-menu > li > a.menu-open:after,
 #sidebar_left.sidebar-light .sidebar-menu > li > ul > li > a.menu-open:after {
-  background: transparent;
+  background: rgba(255, 255, 255, 0);
 }
 
 #sidebar_left.sidebar-light .sidebar-menu > li > ul > li > a.menu-open:after,
@@ -13084,11 +13084,11 @@ A. Default Closed State
 
 #sidebar_right .panel-tabs li a {
   padding: 17px 18px;
-  border-right: 1px solid transparent;
+  border-right: 1px solid rgba(255, 255, 255, 0);
 }
 
 #sidebar_right .panel-tabs li:first-child a {
-  border-left: 1px solid transparent;
+  border-left: 1px solid rgba(255, 255, 255, 0);
 }
 
 /*===============================================
@@ -13268,7 +13268,7 @@ A. Topbar
   margin-bottom: 0;
   font-size: 12px;
   border-radius: 0;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .breadcrumb > li {
@@ -14042,7 +14042,7 @@ body.timeline-page #content {
   height: 0;
   border-style: solid;
   border-width: 8px 0 8px 12px;
-  border-color: transparent transparent transparent #fafafa;
+  border-color: rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) #fafafa;
 }
 
 #timeline .panel:after {
@@ -14056,7 +14056,7 @@ body.timeline-page #content {
   right: 99.8%;
   left: auto;
   border-width: 8px 12px 8px 0;
-  border-color: transparent #fafafa transparent transparent;
+  border-color: rgba(255, 255, 255, 0) #fafafa rgba(255, 255, 255, 0) rgba(255, 255, 255, 0);
 }
 
 #timeline .right-column .panel:after {
@@ -14168,7 +14168,7 @@ body.timeline-page #content {
   right: 99.8%;
   left: auto;
   border-width: 8px 12px 8px 0;
-  border-color: transparent #fafafa transparent transparent;
+  border-color: rgba(255, 255, 255, 0) #fafafa rgba(255, 255, 255, 0) rgba(255, 255, 255, 0);
 }
 
 #timeline.timeline-single .panel:after {
@@ -16197,9 +16197,9 @@ a.list-group-item-dark.active:focus {
 }
 
 .progress-striped .progress-bar-default {
-  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 0));
+  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 0));
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 0));
 }
 
 .progress-bar-primary {
@@ -16215,9 +16215,9 @@ a.list-group-item-dark.active:focus {
 }
 
 .progress-striped .progress-bar-primary {
-  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 0));
+  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 0));
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 0));
 }
 
 .progress-bar-success {
@@ -16233,9 +16233,9 @@ a.list-group-item-dark.active:focus {
 }
 
 .progress-striped .progress-bar-success {
-  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 0));
+  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 0));
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 0));
 }
 
 .progress-bar-info {
@@ -16251,9 +16251,9 @@ a.list-group-item-dark.active:focus {
 }
 
 .progress-striped .progress-bar-info {
-  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 0));
+  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 0));
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 0));
 }
 
 .progress-bar-warning {
@@ -16269,9 +16269,9 @@ a.list-group-item-dark.active:focus {
 }
 
 .progress-striped .progress-bar-warning {
-  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 0));
+  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 0));
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 0));
 }
 
 .progress-bar-danger {
@@ -16287,9 +16287,9 @@ a.list-group-item-dark.active:focus {
 }
 
 .progress-striped .progress-bar-danger {
-  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 0));
+  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 0));
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 0));
 }
 
 .progress-bar-alert {
@@ -16305,9 +16305,9 @@ a.list-group-item-dark.active:focus {
 }
 
 .progress-striped .progress-bar-alert {
-  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 0));
+  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 0));
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 0));
 }
 
 .progress-bar-system {
@@ -16323,9 +16323,9 @@ a.list-group-item-dark.active:focus {
 }
 
 .progress-striped .progress-bar-system {
-  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 0));
+  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 0));
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 0));
 }
 
 .progress-bar-dark {
@@ -16341,9 +16341,9 @@ a.list-group-item-dark.active:focus {
 }
 
 .progress-striped .progress-bar-dark {
-  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 0));
+  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 0));
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 0));
 }
 
 /* SWITCH CONTEXTUALS

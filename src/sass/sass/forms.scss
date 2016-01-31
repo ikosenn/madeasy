@@ -414,7 +414,7 @@ input[type="radio"] .styled:checked + label::after {
 	color: #555555;
 	cursor: default;
 	border: 0;
-	border-bottom-color: transparent;
+	border-bottom-color: rgba(255, 255, 255, 0);
 }
 
 span.round-tab {
@@ -457,7 +457,7 @@ span.round-tab:hover {
 	opacity: 0;
 	margin: 0 auto;
 	bottom: 0px;
-	border: 5px solid transparent;
+	border: 5px solid rgba(255, 255, 255, 0);
 	border-bottom-color: $theme-color;
 	transition: 0.1s ease-in-out;
 }
@@ -469,7 +469,7 @@ span.round-tab:hover {
 	opacity: 1;
 	margin: 0 auto;
 	bottom: 0px;
-	border: 10px solid transparent;
+	border: 10px solid rgba(255, 255, 255, 0);
 	border-bottom-color: $theme-color;
 }
 
@@ -482,7 +482,7 @@ span.round-tab:hover {
 }
 
 .wizard .nav-tabs > li a:hover {
-	background: transparent;
+	background: rgba(255, 255, 255, 0);
 }
 
 .wizard .tab-pane {
