@@ -1,11 +1,11 @@
 machine:
   node:
-    version: 0.12.7
+    version: 5.5.0
+
 
 dependencies:
     override:
-        - npm install
-        - bower install:
+        - npm install:
             environment:
                 PATH: "$(npm bin):$PATH"
 
@@ -15,14 +15,12 @@ test:
         environment:
             PATH: "$(npm bin):$PATH"
 
+
 deployment:
     production:
         branch: master
         commands:
-            - grunt default:
-                environment:
-                    PATH: "$(npm bin):$PATH"
-
+            - bower register madeasy git@github.com:ikosenn/madeasy.git
 general:
     artifacts:
         - coverage
