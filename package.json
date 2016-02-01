@@ -9,6 +9,9 @@
     "type": "git",
     "url": "git@github.com:ikosenn/madeasy.git"
   },
+    "scripts": {
+    "postinstall": "./node_modules/bower/bin/bower cache clean && bower install"
+  },
   "keywords": [
     "travel",
     "tour",
