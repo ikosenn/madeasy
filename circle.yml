@@ -20,7 +20,9 @@ deployment:
     production:
         branch: master
         commands:
-            - bower register madeasy git@github.com:ikosenn/madeasy.git
+            - node deploy.js:
+                environment:
+                    PATH: "$(npm bin):$PATH"
 general:
     artifacts:
         - coverage
