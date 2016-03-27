@@ -10,10 +10,9 @@
     .controller("madeasy.auth.controllers.loginAuth", loginAuth);
     loginAuth.$inject = ["$scope", "$state", "$stateParams",
     "madeasy.auth.services.login", "madeasy.auth.formly.login",
-    "$window", "errorMessage", "madeasy.auth.services.homePage"];
+    "$window", "errorMessage"];
     function loginAuth ($scope, $state, $stateParams,
-        loginService, formlyService, $window, auth_error,
-        homePageServ) {
+        loginService, formlyService, $window, auth_error) {
 
         $scope.loginForm = {};
 
@@ -26,14 +25,12 @@
             };
 
             var success_fxn = function successFunction () {
-                loginService.startTimeout();
                 var load_state = loginService.loadState();
                 loginService.clearState();
                 if (load_state) {
                     $state.go(load_state.name, load_state.params);
                 } else {
-                    var homePage = homePageServ.determineHomePage();
-                    $state.go(homePage);
+                    $state.go("home");
                 }
             };
 

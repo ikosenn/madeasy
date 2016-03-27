@@ -18,9 +18,6 @@
                 }
             })
             .state("profile", {
-                data: {
-                    actions: "view.profile"
-                },
                 ncyBreadcrumb: {
                     label: "User Profile"
                 },

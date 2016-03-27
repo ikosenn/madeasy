@@ -12,10 +12,9 @@
         $scope.logout = true;
 
         var callback = function callbackFunction () {
-            loginService.stopTimeout();
             $state.go("auth_login", {
-                "change_pwd": $stateParams.change_pwd,
-                "timeout": $stateParams.timeout
+                "change_pwd": $stateParams.change_pwd
+                // "timeout": $stateParams.timeout
             });
         };
         return loginService.logout().then(callback, callback);

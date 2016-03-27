@@ -17,7 +17,8 @@
         "madeasy.auth",
         "madeasy.config",
         "madeasy.layout",
-        "madeasy.constants"
+        "madeasy.constants",
+        "madeasy.parser"
     ];
 
     angular.module("madeasyApp", dependencies);
