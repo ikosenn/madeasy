@@ -1,16 +1,25 @@
-"use strict";
+(function (angular) { // jscs:ignore disallowAnonymousFunctions
+    "use strict";
 
-angular.module("madeasyApp", [
-    "ui.router",
-    "ui.bootstrap",
-    "templates-app",
-    "templates-common",
-    "formly",
-    "formlyBootstrap",
+    var dependencies = [
+        // 3rd party
+        "ngAnimate",
+        "templates-app",
+        "ui.bootstrap",
+        "js-data",
+        "formly",
+        "formlyBootstrap",
+        "ngMessages",
+        "ncy-angular-breadcrumb",
 
-    "sil.alerts.service",
+        //Modules
+        "madeasy.common",
+        "madeasy.auth",
+        "madeasy.config",
+        "madeasy.layout",
+        "madeasy.constants"
+    ];
 
-    "madeasy.config",
-    "madeasy.common",
-    "madeasy.auth"
-]);
+    angular.module("madeasyApp", dependencies);
+
+})(window.angular);

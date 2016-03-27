@@ -1,61 +1,87 @@
-"use strict";
+(function (angular) {
+    "use strict";
 
-angular.module("madeasy.common.routes", [
-    "ui.router"
-])
+    angular.module("madeasy.common.routes", [
+        "ui.router"
+    ])
 
-.config(function config($stateProvider) {
-    $stateProvider
-        .state("base_state", {
-            views: {
-                "indexheader@":{
-                    templateUrl: "common/tpls/header.tpl.html"
-                }
-            },
-            ncyBreadcrumb: {
-                label: "EMR"
-            }
-        })
-        .state("profile", {
-            url :"/profile/:userId",
-            parent: "base_state",
-            views: {
-                "content@":{
-                    templateUrl: "common/tpls/user-detail.tpl.html",
-                    controller: "emr.common.controllers.user_profile"
+    .config(function config($stateProvider) {
+        $stateProvider
+            .state("base_state", {
+                ncyBreadcrumb: {
+                    label: "madeasy"
                 },
-                "pageactions@":{
-                    templateUrl:"common/tpls/pageactions/" +
-                                "common-user-actions.tpl.html"
+                views: {
+                    "indexheader@":{
+                        templateUrl: "layout/tpls/header.tpl.html"
+                    }
+                }
+            })
+            .state("profile", {
+                data: {
+                    actions: "view.profile"
                 },
-                "indexsidebar@" : {
-                    templateUrl: "common/tpls/sidebars/" +
-                                 "user-sidebar.tpl.html"
+                ncyBreadcrumb: {
+                    label: "User Profile"
+                },
+                parent: "base_state",
+                url :"/profile/:userId",
+                views: {
+                    "content@":{
+                        controller: "madeasy.common.controllers.user_profile",
+                        templateUrl: "common/tpls/user_detail.tpl.html"
+                    },
+                    "indexsidebar@" : {
+                        templateUrl: "common/tpls/sidebars/" +
+                                     "user_sidebar.tpl.html"
+                    },
+                    "pageactions@":{
+                        templateUrl:"common/tpls/pageactions/" +
+                                    "common_user_actions.tpl.html"
+                    }
                 }
-            },
-            ncyBreadcrumb: {
-                label: "User Profile"
-            }
-        })
-        .state("change_password", {
-            url :"/",
-            parent: "base_state",
-            views: {
-                "content@":{
-                    templateUrl: "common/tpls/main.tpl.html"
+            })
+            .state("change_password", {
+                data: {
+                    actions: "edit.profile"
+                },
+                ncyBreadcrumb: {
+                    label: "Change Password"
+                },
+                parent: "base_state",
+                url :"/profile/password/change",
+                views: {
+                    "content@":{
+                        controller: "madeasy.common.controllers.changePassword",
+                        templateUrl: "common/tpls/change_password.tpl.html"
+                    },
+                    "indexsidebar@" : {
+                        templateUrl: "common/tpls/sidebars/" +
+                                     "user_sidebar.tpl.html"
+                    },
+                    "pageactions@":{
+                        templateUrl:"common/tpls/pageactions/" +
+                                    "common_user_actions.tpl.html"
+                    }
                 }
-            },
-            ncyBreadcrumb: {
-                label: "Change Password"
-            }
-        }).state("auth_403", {
-            url: "/403/?initial_pwd&no_organisation",
-            parent: "base_state",
-            views:{
-                "content@":{
-                    templateUrl: "common/tpls/403.tpl.html",
-                    controller: "emr.common.controllers.errorPage"
+            })
+            .state("auth_403", {
+                // Allows user to view state with  no organisation
+                // and when `is_initial` is true
+                data: {
+                    showErrorPage: false
+                },
+                ncyBreadcrumb: {
+                    label: "Error Page"
+                },
+                parent: "base_state",
+                url: "/403/?initial_pwd&no_organisation",
+                views:{
+                    "content@":{
+                        controller: "madeasy.common.controllers.errorPage",
+                        templateUrl: "layout/tpls/403.tpl.html"
+                    }
                 }
-            }
-        });
-});
+            });
+    });
+})(angular);

@@ -1,42 +1,43 @@
-<html ng-app="madeasyApp">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="UTF-8">
-    <link rel="icon" type="image/png"
-      sizes="96x96" href="assets/img/favicon.png">
-    <title>Madeasy</title>
-    <base href="/" >
-    <!-- compiled CSS --><% styles.forEach( function ( file ) { %>
-    <link rel="stylesheet" type="text/css" href="<%= file %>" /><% }); %>
-  </head>
-  <body class="sb-l-o sb-l-large onload-check">
-    <div id="main" ui-view="main">
-      <header class="navbar navbar-fixed-top navbar-shadow" style="background-color: #772953;" ng-cloak>
-        <div ui-view="indexheader"></div>
-        <div ng-include="'common/tpls/main-nav.tpl.html'"></div>
-      </header>
-      <div ng-include="'common/tpls/main-nav.tpl.html'"></div>
-      <aside id="sidebar_left" class="nano nano-light sidebar-light" ng-cloak>
-        <div ui-view="indexsidebar" responsive-check></div>
-      </aside>
-      <section id="content_wrapper">
-        <header id="topbar" class="alt" ng-cloak>
-          <bread-crumbs></bread-crumbs>
-          <div class="pull-right">
-            <div ui-view="pageactions"></div>
-          </div>
-        </header>
-        <section id="content">
-          <div class="t-main" ui-view="content">
-              <div class="text-center mt200 panel-fullscreen">
-                  <div class="loader">Loading...</div>
-              </div>
-          </div>
-        </section>
-      </section>
-    </div>
-    <!-- compiled JavaScript -->
-    <% scripts.forEach( function ( file ) { %>
-    <script type="text/javascript" src="<%= file %>"></script><% }); %>
-  </body>
+<html ng-app="madeasyApp" ng-csp>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
+        <title>Madeasy</title>
+        <base href="/" >
+        <!-- compiled CSS -->
+        <% styles.forEach( function ( file ) { %>
+        <link rel="stylesheet" type="text/css" href="<%= file %>" /><% }); %>
+    </head>
+    <body class="sb-l-o sb-l-large onload-check">
+        <div id="main" ui-view="main">
+            <header class="navbar navbar-fixed-top navbar-shadow bg-info" ng-cloak>
+                <div ui-view="indexheader"></div>
+                <div ng-include="'layout/tpls/main_nav.tpl.html'"></div>
+            </header>
+            <div ng-include="'layout/tpls/main_nav.tpl.html'"></div>
+            <aside id="sidebar_left" class="nano nano-light sidebar-light" ng-cloak>
+                <responsive-check ui-view="indexsidebar"></responsive-check>
+            </aside>
+            <section id="content_wrapper">
+                <header id="topbar" class="alt" ng-cloak>
+                    <bread-crumbs></bread-crumbs>
+                    <div class="pull-right">
+                        <div ui-view="pageactions"></div>
+                    </div>
+                </header>
+                <section id="content">
+                    <div class="t-main" ui-view="content">
+                        <div class="text-center mt200 panel-fullscreen">
+                            <div class="loader">Loading...</div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </div>
+        <!-- compiled JavaScript -->
+        <% scripts.forEach( function ( file ) { %>
+        <script type="text/javascript" src="<%= file %>"></script><% }); %>
+
+    </body>
 </html>

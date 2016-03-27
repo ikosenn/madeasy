@@ -22,21 +22,21 @@ module.exports = function ( karma ) {
     frameworks: [
         'jasmine',
         'sinon'
-
     ],
     plugins: [
         'karma-jasmine',
         'karma-sinon',
         'karma-firefox-launcher',
-        'karma-phantomjs-launcher',
         'karma-coverage',
         'karma-threshold-reporter',
         'karma-mocha-reporter',
-        'karma-ng-html2js-preprocessor'
+        'karma-ng-html2js-preprocessor',
+        'karma-junit-reporter',
+        'karma-babel-preprocessor'
     ],
     preprocessors: {
-        'src/app/**/*.js': ['coverage'],
-        'src/app/common/tpls/*.tpl.html': ['ng-html2js'],
+        'src/app/**/*.js': ['coverage', 'babel'],
+        'src/app/common/tpls/*.tpl.html': ['ng-html2js']
     },
 
     /**
@@ -46,7 +46,8 @@ module.exports = function ( karma ) {
         'progress',
         'coverage',
         'threshold',
-        'mocha'
+        'mocha',
+        'junit'
     ],
 
     // reporter options
@@ -100,11 +101,20 @@ module.exports = function ( karma ) {
         ]
     },
 
-    thresholdReporter: {
-        statements: 0,
-        branches: 0,
-        lines: 0,
-        functions: 0
+    junitReporter: {
+      outputDir: 'junitxml_report', // results will be saved as $outputDir/$browserName.xml
+      outputFile: "report.xml", // if included, results will be saved as $outputDir/$browserName/$outputFile
+      suite: '', // suite will become the package name attribute in xml testsuite element
+      useBrowserName: false // add browser name to report and classes names
     },
+
+    thresholdReporter: {
+        statements: 100,
+        branches: 100,
+        lines: 100,
+        functions: 100
+    },
+
+    reportSlowerThan: 100
   });
 };

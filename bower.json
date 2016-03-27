@@ -1,45 +1,36 @@
 {
-  "name": "madeasy",
-  "version": "0.1.0",
-  "description": "Travel Companion front-end",
-  "authors": [
-    "ikosenn"
-  ],
-  "license": "MIT",
-  "keywords": [
-    "madeasy",
-    "travel",
-    "companion"
-  ],
-  "homepage": "git@github.com:ikosenn/madeasy.git",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "vendor",
-    "test",
-    "tests"
-  ],
+  "name": "madeasy-frontend",
+  "version": "0.5.16",
   "devDependencies": {
-    "angular-mocks": "~1.4.7"
+    "angular-mocks": "~1.5.0",
+    "js-data-angular-mocks": "~3.1.0"
   },
   "dependencies": {
-    "angular": "~1.4.7",
-    "angular-bootstrap": "~0.13.4",
-    "angular-ui-router": "~0.2.15",
+    "angular": "~1.5.0",
+    "angular-animate": "~1.5.0",
+    "angular-bootstrap": "~1.1.0",
+    "angular-motion": "~0.4.3",
+    "angular-ui-router": "~0.2.18",
     "bootstrap": "~3.3.6",
     "fontawesome": "~4.4.0",
-    "angular-formly": "~7.3.9",
-    "angular-formly-templates-bootstrap": "~6.2.0",
-    "api-check": "~7.5.5",
+    "moment": "^2.12.0",
     "underscore": "~1.8.3",
-    "sil-alerts": "https://bower.slade360.co.ke/getpackage/sil-alerts__1.0.0.tar.gz",
-    "angular-toastr": "~1.5.0"
+    "js-data": "~2.8.2",
+    "js-data-angular": "~3.1.0",
+    "api-check": "~7.5.5",
+    "angular-formly": "~7.3.9",
+    "angular-messages": "~1.5.0",
+    "angular-formly-templates-bootstrap": "~6.2.0",
+    "font-awesome": "fontawesome#~4.4.0",
+    "angular-loading-bar": "~0.8.0",
+    "angular-breadcrumb": "~0.4.1",
+    "underscore.string": "~3.2.3",
+    "ui-select": "angular-ui-select#^0.16.1"
   },
-"resolutions": {
-   "angular": "~1.4.9",
-   "angular-mocks": "~1.4.9",
-   "bootstrap": "~3.3.5",
-   "font-awesome": "~4.4.0"
- }
+  "resolutions": {
+    "angular": "~1.5.0",
+    "angular-mocks": "~1.5.0",
+    "bootstrap": "~3.3.5",
+    "js-data": "~2.8.2"
+  }
 }

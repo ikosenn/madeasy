@@ -1,0 +1,66 @@
+<div>
+  <div class="navbar-branding">
+      <a class="navbar-brand" ui-sref="scheduling">
+          <!-- <b>SLADE360 madeasy</b> -->
+          <img src="/assets/img/slademadeasywhite.png" alt="SLADE360 madeasy">
+      </a>
+      <submenu-toggle ng-show="toggle" id="toggle_sidemenu_l" class="fa fa-bars">
+      </submenu-toggle>
+  </div>
+  <ul class="nav navbar-nav navbar-right" ng-controller="madeasy.auth.controllers.userDetails as userDetailsController">
+      <li>
+        <div class="navbar-btn btn-group">
+          <a href="#" class="topbar-menu-toggle btn btn-sm"
+            tooltip="Server Status" tooltip-placement="bottom" aria-pressed="false">
+            <span class="fa fa-check-circle"></span>
+          </a>
+        </div>
+      </li>
+      <li class="dropdown menu-merge">
+        <div ng-controller="madeasy.inbox.controllers.inbox" class="navbar-btn btn-group">
+          <button data-toggle="dropdown" class="btn btn-sm dropdown-toggle" aria-expanded="false">
+            <span class="fa fa-envelope fs14 va-m"></span>
+            <span class="badge badge-danger">{{user_counter + group_counter}}</span>
+          </button>
+          <div class="dropdown-menu dropdown-persist w450" role="menu">
+            <div class="panel mbn">
+                <div class="panel-menu">
+                   <span class="panel-icon"><i class="fa fa-envelope"></i></span>
+                   <span class="panel-title fw600"> Inbox</span>
+                </div>
+                <div ng-repeat="msg in messages | filter:unread_filter"
+                ng-show="$index<5" class="panel-body">
+                  <div ng-include="'common/tpls/inbox.tpl.html'"></div>
+                </div>
+                <div class="panel-footer text-center p7">
+                  <a ui-sref="inbox" class="link-unstyled"> View All </a>
+                </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="menu-divider hidden-xs">
+        <i class="fa fa-circle"></i>
+      </li>
+      <li class="dropdown menu-merge">
+          <a href="#" class="dropdown-toggle p15" data-toggle="dropdown">
+              <span class="hidden-xs pl15">
+                  <i class="fa fa-user"></i>&nbsp;{{userDetailsController.displayName}}
+              </span>
+              <span class="fa fa-angle-down"></span>
+          </a>
+          <ul class="dropdown-menu list-group dropdown-persist w250" role="menu"
+          ng-controller="madeasy.common.controllers.user_profile">
+              <li class="list-group-item">
+                <a ui-sref="profile({'userId': userProfile.model.id})">
+                  <span class="fa fa-user">
+                  </span> Profile </a>
+              </li>
+              <li class="dropdown-footer">
+                <a ui-sref="auth_logout" class="">
+                <span class="fa fa-power-off pr5"></span> Logout </a>
+              </li>
+          </ul>
+      </li>
+  </ul>
+</div>

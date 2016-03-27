@@ -10,16 +10,14 @@ module.exports = function ( grunt ) {
     grunt.loadNpmTasks("grunt-contrib-jshint");
     grunt.loadNpmTasks("grunt-jscs");
     grunt.loadNpmTasks("grunt-contrib-concat");
-    grunt.loadNpmTasks("grunt-contrib-watch");
-    grunt.loadNpmTasks("grunt-contrib-uglify");
-    grunt.loadNpmTasks("grunt-contrib-sass");
-    grunt.loadNpmTasks("grunt-conventional-changelog");
-    grunt.loadNpmTasks("grunt-bump");
+    grunt.loadNpmTasks("grunt-contrib-less");
     grunt.loadNpmTasks("grunt-karma");
     grunt.loadNpmTasks("grunt-html2js");
-    grunt.loadNpmTasks("grunt-istanbul-coverage");
     grunt.loadNpmTasks("grunt-contrib-connect");
-    grunt.loadNpmTasks("grunt-concurrent");
+    grunt.loadNpmTasks("grunt-contrib-uglify");
+    grunt.loadNpmTasks("grunt-babel");
+    grunt.loadNpmTasks("grunt-glob");
+    grunt.loadNpmTasks("grunt-uncss");
 
     /**
      * Load in our build configuration file.
@@ -47,18 +45,8 @@ module.exports = function ( grunt ) {
             banner:
                 "/*!Version <%= pkg.version %> \n" +
                 " * Generated <%= grunt.template.today('yyyy-mm-dd') %>\n" +
-                " * Copyright Ian Kosen\n" +
+                " * Copyright Madeasy Inc\n" +
                 " */"
-        },
-
-        /**
-         * Creates a changelog on a new version.
-         */
-        changelog: {
-            options: {
-                dest: "CHANGELOG.md",
-                template: "changelog.tpl"
-            }
         },
 
         /**
@@ -81,6 +69,37 @@ module.exports = function ( grunt ) {
                 tagMessage: "Version %VERSION%",
                 push: false,
                 pushTo: "origin"
+            }
+        },
+
+        babel: {
+            options: {
+                sourceMap: false,
+                presets: ["es2015"]
+            },
+            dist: {
+                files: [{
+                    expand: true,
+                    src: ["<%= build_dir %>/src/app/**/*.js"],
+                    dest: ".",
+                    ext:".js"
+                }]
+            }
+        },
+
+        /**
+        * Minify the sources!
+        */
+        uglify: {
+            compile: {
+                options: {
+                    banner: "<%= meta.banner %>",
+                    mangle: false
+                },
+                files: {
+                    "<%= concat.compile_js.dest %>":
+                    "<%= concat.compile_js.dest %>"
+                }
             }
         },
 
@@ -222,26 +241,11 @@ module.exports = function ( grunt ) {
                     "<%= build_dir %>/src/**/*.js",
                     "<%= html2js.app.dest %>",
                     "<%= html2js.common.dest %>",
+                    "<%= html2js.formly.dest %>",
                     "module.suffix"
                 ],
                 dest: "<%= compile_dir %>/assets/<%= pkg.name %>-" +
                 "<%= pkg.version %>.js"
-            }
-        },
-
-        /**
-         * Minify the sources!
-         */
-        uglify: {
-            compile: {
-                options: {
-                    banner: "<%= meta.banner %>",
-                    mangle: false
-                },
-                files: {
-                    "<%= concat.compile_js.dest %>":
-                        "<%= concat.compile_js.dest %>"
-                }
             }
         },
 
@@ -251,28 +255,21 @@ module.exports = function ( grunt ) {
          * Only our `main.less` file is included in compilation; all other
          * files must be imported from this file.
          */
-         /**
-         * Sass
-         */
-        sass: {
+        less: {
             build: {
-                options: {
-                    style: "expanded",
-                    compass: true
-                },
                 files: {
                     "<%= build_dir %>/assets/<%= pkg.name %>-<%= pkg.version %>.css":
-                    "<%= app_files.scss %>"
+                        "<%= app_files.less %>"
                 }
             },
             compile: {
-                options: {
-                    style: "compressed",
-                    compass: true
-                },
                 files: {
                     "<%= build_dir %>/assets/<%= pkg.name %>-<%= pkg.version %>.css":
-                    "<%= app_files.scss %>"
+                        "<%= app_files.less %>"
+                },
+                options: {
+                    cleancss: true,
+                    compress: true
                 }
             }
         },
@@ -296,7 +293,7 @@ module.exports = function ( grunt ) {
                 "Gruntfile.js", "build.config.js"
             ],
             config_files: [
-                ".jshintrc", "bower.json", "package.json", ".bowerrc",
+                ".jshintrc", "bower.json","package.json", ".bowerrc",
                 "src/<%= settings_file %>"
             ],
             options: {
@@ -310,6 +307,35 @@ module.exports = function ( grunt ) {
                 jshintrc: ".jshintrc"
             },
             globals: {}
+        },
+
+        uncss: {
+              dist: {
+                files: {
+                  "tidy.css": ["build/index.html"]
+                }
+              }
+        },
+
+        jsDoc: {
+        checkAnnotations: true,
+        checkParamExistence: true,
+        checkParamNames: true,
+        requireParamTypes: true,
+        checkRedundantParams: true,
+        checkReturnTypes: true,
+        checkRedundantReturns: true,
+        requireReturnTypes: true,
+        checkTypes: true,
+        checkRedundantAccess: true,
+        leadingUnderscoreAccess: "protected",
+        enforceExistence: true,
+        requireHyphenBeforeDescription: true,
+        requireNewlineAfterDescription: true,
+        disallowNewlineAfterDescription: true,
+        requireDescriptionCompleteSentence: true,
+        requireParamDescription: true,
+        requireReturnDescription: true
         },
 
         jscs: {
@@ -331,7 +357,7 @@ module.exports = function ( grunt ) {
                 ],
                 requireOperatorBeforeLineBreak: true,
                 maximumLineLength: {
-                    "value": 80,
+                    "value": 85,
                     "allExcept": ["comments", "regex"]
                 },
                 validateIndentation: 4,
@@ -340,6 +366,14 @@ module.exports = function ( grunt ) {
                 disallowMultipleLineStrings: true,
                 disallowMixedSpacesAndTabs: true,
                 disallowTrailingWhitespace: true,
+                disallowUnusedParams: true,
+                disallowYodaConditions: true,
+                disallowTrailingComma: true,
+                disallowNestedTernaries: true,
+                disallowTabs: true,
+                disallowImplicitTypeConversion: ["numeric", "boolean", "binary",
+                "string"],
+                validateOrderInObjectKeys: "asc",
                 disallowSpaceAfterPrefixUnaryOperators: true,
                 requireSpaceAfterKeywords: [
                     "if",
@@ -362,6 +396,9 @@ module.exports = function ( grunt ) {
                 ],
                 requireSpaceAfterBinaryOperators: true,
                 disallowMultipleSpaces: {"allowEOLComments": true},
+                requireCapitalizedComments: true,
+                validateCommentPosition: { position: "above" },
+                requireAlignedMultilineParams: true,
                 requireSpacesInConditionalExpression: true,
                 requireSpaceBeforeBlockStatements: true,
                 requireSpacesInForStatement: true,
@@ -399,6 +436,13 @@ module.exports = function ( grunt ) {
                 },
                 src: [ "<%= app_files.ctpl %>" ],
                 dest: "<%= build_dir %>/templates-common.js"
+            },
+            formly: {
+                options: {
+                    base: "src/assets/formly"
+                },
+                src: [ "<%= app_files.formly %>" ],
+                dest: "<%= build_dir %>/templates-formly.js"
             }
         },
 
@@ -435,6 +479,7 @@ module.exports = function ( grunt ) {
                     "<%= build_dir %>/src/**/*.js",
                     "<%= html2js.common.dest %>",
                     "<%= html2js.app.dest %>",
+                    "<%= html2js.formly.dest %>",
                     "<%= vendor_files.css %>",
                     "<%= build_dir %>/assets/<%= pkg.name %>-" +
                     "<%= pkg.version %>.css"
@@ -470,6 +515,7 @@ module.exports = function ( grunt ) {
                     "<%= vendor_files.js %>",
                     "<%= html2js.app.dest %>",
                     "<%= html2js.common.dest %>",
+                    "<%= html2js.formly.dest %>",
                     "<%= test_files.js %>"
                 ]
             }
@@ -539,6 +585,7 @@ module.exports = function ( grunt ) {
             /**
              * When index.html changes, we need to compile it.
              */
+
             html: {
                 files: [ "<%= app_files.html %>" ],
                 tasks: [ "index:build" ]
@@ -550,7 +597,8 @@ module.exports = function ( grunt ) {
             tpls: {
                 files: [
                     "<%= app_files.atpl %>",
-                    "<%= app_files.ctpl %>"
+                    "<%= app_files.ctpl %>",
+                    "<%= app_files.formly %>"
                 ],
                 tasks: [ "html2js" ]
             },
@@ -558,9 +606,9 @@ module.exports = function ( grunt ) {
             /**
              * When the CSS files change, we need to compile and minify them.
              */
-            sass: {
-                files: ["src/**/*.scss"],
-                tasks: ["sass:build"]
+            less: {
+                files: [ "src/**/*.less" ],
+                tasks: [ "less:build" ]
             },
 
             /**
@@ -588,20 +636,16 @@ module.exports = function ( grunt ) {
      * `delta`) and then add a new task called `watch` that does a clean build
      * before watching for changes.
      */
-    grunt.renameTask( "watch", "delta" );
-    grunt.registerTask( "watch", [ "build", "karma:unit", "delta" ] );
-
     /**
      * The default task is to build and compile.
      */
-    grunt.registerTask( "default", [ "build", "compile" ] );
+    grunt.registerTask( "default", [ "build", "babel", "compile" ] );
 
     /**
      * The `build` task gets your app ready to run for development and testing.
      */
     grunt.registerTask( "build", [
-        "clean", "html2js", "jshint", "jscs",
-        "sass:build", "concat:build_css",
+        "clean", "html2js", "jshint", "jscs", "less:build", "concat:build_css",
         "copy:build_app_assets", "copy:build_vendor_assets",
         "copy:build_app_settings", "copy:build_appjs", "copy:build_vendorjs",
         "index:build", "karmaconfig"
@@ -612,12 +656,12 @@ module.exports = function ( grunt ) {
      * minifying your code.
      */
     grunt.registerTask( "compile", [
-        "sass:compile", "copy:compile_assets",
+        "less:compile", "copy:compile_assets",
         "copy:compile_app_settings",
         "concat:compile_js", "uglify", "index:compile"
     ]);
 
-    grunt.registerTask("test", ["build", "karma"]);
+    grunt.registerTask("test", ["build", "babel", "karma", ]);
 
     /**
      * A utility function to get all app JavaScript sources.

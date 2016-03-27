@@ -3,23 +3,18 @@
 (function (window) {
 
     var setts = {
-        "HOME_PAGE_NAME": "",
         "SERVER_URL": "http://localhost:8000",
-        "DEBUG": true,
         "ACTIONS": {
             "RESTRICT": []
         },
         "CREDZ": {
-            "client_id": "madeasy",
-            "client_secret": "madeasy@siri"
+            "client_id": "madeasyapp224",
+            "client_secret": "madeasyapp@siri"
         },
         "AUTH": {
             "TOKEN_URL": "/o/token/",
-            "AUTHORIZE_URL": "/o/authorize/",
             "REVOKE_TOKEN_URL": "/o/revoke_token/",
             "USER_INFO_URL": "/me/",
-            "REDIRECT_URL": "/complete/",
-            "USER_PROFILE": "/manage/profile/"
         }
     };
 
