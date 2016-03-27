@@ -17,7 +17,6 @@ module.exports = {
      */
     settings_file: "settings.js",
 
-
     /**
      * This is a collection of file patterns that refer to our app code (the
      * stuff in `src/`). These file paths are used in the configuration of
@@ -29,14 +28,15 @@ module.exports = {
      */
     app_files: {
         js: [ "src/**/*.js", "!src/**/*.spec.js", "!src/assets/**/*.js",
-            "!src/<%= settings_file %>" ],
+            "!src/<%= settings_file %>"],
         jsunit: [ "src/**/*.spec.js" ],
 
         atpl: [ "src/app/**/*.tpl.html" ],
         ctpl: [ "src/common/**/*.tpl.html" ],
+        formly:["src/assets/formly/**/*.json"],
 
         html: [ "src/index.html" ],
-        scss: "src/sass/sass/main.scss"
+        less: "src/less/main.less"
     },
 
     /**
@@ -73,18 +73,23 @@ module.exports = {
             "vendor/angular/angular.js",
             "vendor/underscore/underscore.js",
             "vendor/bootstrap/dist/js/bootstrap.js",
-            "vendor/angular-resource/angular-resource.js",
             "vendor/angular-animate/angular-animate.js",
-            "vendor/api-check/dist/api-check.js",
             "vendor/angular-ui-router/release/angular-ui-router.js",
+            "vendor/angular-bootstrap/ui-bootstrap.js",
+            "vendor/angular-bootstrap/ui-bootstrap-tpls.js",
+            "vendor/angular-toastr/dist/angular-toastr.js",
+            "vendor/js-data/dist/js-data.js",
+            "vendor/js-data-angular/dist/js-data-angular.js",
+            "vendor/api-check/dist/api-check.js",
             "vendor/angular-formly/dist/formly.js",
             "vendor/angular-formly-templates-bootstrap/dist/" +
-            "angular-formly-templates-bootstrap.js",
-            "vendor/angular-bootstrap/ui-bootstrap.js",
-            "vendor/sil-alerts/src/sil-alerts.js",
-            "vendor/angular-toastr/dist/angular-toastr.js",
-            "vendor/angular-toastr/dist/angular-toastr.tpls.js",
-            "vendor/angular-bootstrap/ui-bootstrap-tpls.js"
+                "angular-formly-templates-bootstrap.js",
+            "vendor/angular-messages/angular-messages.js",
+            "vendor/angular-toggle-switch/angular-toggle-switch.min.js",
+            "vendor/angular-loading-bar/build/loading-bar.js",
+            "vendor/angular-breadcrumb/dist/angular-breadcrumb.js",
+            "vendor/ui-select/dist/select.js",
+            "vendor/moment/moment.js"
         ],
         css: [
         ],
@@ -101,8 +106,8 @@ module.exports = {
 
     connect : {
         options: {
-            port: 9999,
-            hostname: "0.0.0.0",
+            port: 8030,
+            hostname: "*",
             keepalive: true,
             middleware: function (connect, options, middlewares) {
                 var modRewrite = require("connect-modrewrite");

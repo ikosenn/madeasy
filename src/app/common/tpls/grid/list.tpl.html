@@ -1,29 +1,35 @@
 <div class="panel-body">
-    <table class="sil-table table-responsive table-hover">
-        <thead>
-            <tr class="bg-light">
-                <th ng-repeat="col in columns">
-                    <grid-table-ordering columns="columns">
-                        <i class="fa fa-sort" ng-if="col.sortable !== ''"
-                                ng-click="orderData(col.sortable, $event)"
-                                id="ordering-icon">
-                        </i>{{col.display}}
-                    </grid-table-ordering>
-                </th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr ng-repeat="item in list">
-                <td ng-repeat="col in columns">
-                    {{item[col.name]  || "not provided" | date: col.date_format | uppercase}}
-                </td>
-                <td ng-if="!_.isEmpty(rowLevelActionsList)">
-                    <row-level-action
-                        row-level-actions-list="rowLevelActionsList">
-                    </row-level-action>
-                </td>
-            </tr>
-        </tbody>
+  <div id="no-more-tables">
+    <table class="table table-responsive table-hover">
+      <thead class="thead-inverse pt5 pb5">
+        <tr>
+          <th ng-repeat="col in columns">
+            <sil-grid-table-ordering columns="columns">
+              <i class="fa fa-sort"
+                ng-if="col.sortable !== ''"
+                ng-click="orderData(col.sortable, $event)"
+                id="ordering-icon">
+              </i>{{col.display}}
+            </sil-grid-table-ordering>
+          </th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="item in list">
+          <td ng-repeat="col in columns"
+            data-title="{{col.display}}">
+            {{item[col.name]  || "not provided" |
+            date: col.date_format}}
+          </td>
+          <td>
+            <sil-row-level-action
+              row-level-actions-list="rowLevelActionsList"
+              item="item">
+            </sil-row-level-action>
+          </td>
+        </tr>
+      </tbody>
     </table>
+  </div>
 </div>

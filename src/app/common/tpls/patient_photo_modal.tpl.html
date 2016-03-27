@@ -1,0 +1,86 @@
+<!-- Modal starts here -->
+    <div>
+        <sil-js-data-alerts></sil-js-data-alerts>
+      <div class="modal-header">
+        <button type="button" class="close" aria-label="Close" ng-click="$dismiss();">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title">Update Patient's Profile Picture</h4>
+      </div>
+      <div class="modal-body sil-col-12">
+          <!--Photo upload content-->
+          <label for="patient-image-label" class="sil-col-5">
+          <div class="upload-photo-picker photo-cursor">
+                  <i class="fa fa-plus"></i><span>Upload Photo</span>
+          </div>
+          </label>
+
+          <form enctype="multipart/form-data" name="patientPhotoForm">
+              <input
+              type="file" name="patientPhoto"
+              accept="image/jpeg,image/png,image/gif"
+              class="form-control"
+              onchange="angular.element(this).scope().fileNameChanged(this.files);" id="patient-image-label"
+              img-cropper-fileread image="cropper.sourceImage"/>
+          <!--end photo upload-->
+
+          <!--Start photo taking via webcam -->
+          <div class="sil-col-5 col-md-offset-2 upload-photo-picker photo-cursor" ng-click="openWebcam()">
+              <i class="fa fa-camera"></i><span>Take Photo</span>
+          </div>
+          <br/><br/><br/><br/>
+          <div ng-if="streamWebcam && !showImage">
+              <webcam
+                  on-streaming="onSuccess()"
+                  on-error="onError(err)"
+                  channel="channel"
+                  placeholder="'../assets/img/loader.gif'"
+                  class="sil-col-offset-2 img img-thumbnail img-responsive">
+              </webcam>
+              <canvas id="captureLiveImage" class="hidden"></canvas>
+              <br/><br/>
+          </div>
+          <div class="sil-col-offset-2" ng-if="showImage">
+              <img data-ng-src="{{imgBase64}}"
+                  class="img img-responsive img-thumbnail"
+                  alt="Live Patient Image" />
+          </div>
+          <button class="sil-col-offset-4 btn btn-success btn-md" ng-click="takeSnapshot()" ng-if="streamWebcam && !showImage">
+              <i class="fa fa-camera"></i>&nbsp;Capture Picture
+          </button>
+
+          <div>
+              <br/><br/>
+              <button class="sil-col-offset-4 btn btn-default btn-md" ng-click="openWebcam()" ng-if="!streamWebcam && showImage">
+                  <i class="fa fa-camera"></i>&nbsp;Retake Photo
+              </button>
+          </div>
+              <!--end taking snapshot using the webcam  -->
+
+          <!--Crop image  -->
+          <div ng-if="!fileNotSelected">
+               <canvas width="480" height="320" id="canvas" image-cropper image="cropper.sourceImage" cropped-image="cropper.croppedImage" crop-width="320"min-width="200" min-height="150"crop-height="240" keep-aspect="true" touch-radius="40" crop-area-bounds="bounds" class="img img-thumbnail img-responsive sil-col-offset-1"></canvas>
+          </div>
+          <!--End photo taking via the webcam -->
+          <p>
+            <h5>Upload New Image</h5>
+              <span class="text text-info">
+                  <i class="fa fa-info-circle"></i> Image Rules
+              </span> <br/>
+              <p class="bg-warm-warning sil-col-6">
+                  Allowed Image Types: .jpg, .jpeg, .png<br/>
+                  Allowed Image Size:  Less than 1MB
+              </p>
+          </p>
+      </div>
+
+      <hr class="hr-bold"/>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" ng-click="$dismiss();">Close</button>
+        <button type="button" ng-click="updatePatientImage();"
+          class="btn btn-primary" ng-disabled="!enableUploadBtn">
+          Upload Photo</button>
+      </form><!-- End multipart/formdata form -->
+      </div><!-- Modal ends here -->
+  </div>

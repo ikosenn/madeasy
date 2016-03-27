@@ -1,0 +1,277 @@
+/**
+*===============================
+* Mixin classes for zen stying
+*===============================
+*/
+.mde-table {
+  &:extend(.table all);
+  .fs13;
+}
+.mde-tbl-btn{
+	&:extend(.btn all);
+	&:extend(.btn-sm all);
+}
+.mde-alert-success{
+	&:extend(.alert all);
+	&:extend(.alert-success all);
+}
+
+.mde-ms-btn {
+    &:extend(.btn-primary);
+    margin-bottom: 20px;
+}
+
+
+/**sil Utility mixins**/
+.mde-col-1{
+	&:extend(.col-sm-1 all);
+	&:extend(.col-md-1 all);
+	&:extend(.col-lg-1 all);
+}
+.mde-col-2{
+	&:extend(.col-sm-2 all);
+	&:extend(.col-md-2 all);
+	&:extend(.col-lg-2 all);
+}
+.mde-col-3{
+	&:extend(.col-sm-3 all);
+	&:extend(.col-md-3 all);
+	&:extend(.col-lg-3 all);
+}
+.mde-col-4{
+	&:extend(.col-sm-4 all);
+	&:extend(.col-md-4 all);
+	&:extend(.col-lg-4 all);
+}
+.mde-col-5{
+	&:extend(.col-sm-5 all);
+	&:extend(.col-md-5 all);
+	&:extend(.col-lg-5 all);
+}
+.mde-col-6{
+	&:extend(.col-sm-6 all);
+	&:extend(.col-md-6 all);
+	&:extend(.col-lg-6 all);
+}
+.mde-col-7{
+	&:extend(.col-sm-7 all);
+	&:extend(.col-md-7 all);
+	&:extend(.col-lg-7 all);
+}
+.mde-col-8{
+	&:extend(.col-sm-8 all);
+	&:extend(.col-md-8 all);
+	&:extend(.col-lg-8 all);
+}
+.mde-col-9{
+	&:extend(.col-sm-9 all);
+	&:extend(.col-md-9 all);
+	&:extend(.col-lg-9 all);
+}
+.mde-col-10{
+	&:extend(.col-sm-10 all);
+	&:extend(.col-md-10 all);
+	&:extend(.col-lg-10 all);
+}
+.mde-col-11{
+	&:extend(.col-sm-11 all);
+	&:extend(.col-md-11 all);
+	&:extend(.col-lg-11 all);
+}
+.mde-col-12{
+	&:extend(.col-sm-12 all);
+	&:extend(.col-md-12 all);
+	&:extend(.col-lg-12 all);
+}
+// offset mixin
+.mde-col-offset-1{
+	&:extend(.col-sm-offset-1 all);
+	&:extend(.col-md-offset-1 all);
+	&:extend(.col-lg-offset-1 all);
+}
+.mde-col-offset-2{
+	&:extend(.col-sm-offset-2 all);
+	&:extend(.col-md-offset-2 all);
+	&:extend(.col-lg-offset-2 all);
+}
+.mde-col-offset-3{
+	&:extend(.col-sm-offset-3 all);
+	&:extend(.col-md-offset-3 all);
+	&:extend(.col-lg-offset-3 all);
+}
+.mde-col-offset-4{
+	&:extend(.col-sm-offset-4 all);
+	&:extend(.col-md-offset-4 all);
+	&:extend(.col-lg-offset-4 all);
+}
+.mde-col-offset-5{
+	&:extend(.col-sm-offset-5 all);
+	&:extend(.col-md-offset-5 all);
+	&:extend(.col-lg-offset-5 all);
+}
+.mde-col-offset-6{
+	&:extend(.col-sm-offset-6 all);
+	&:extend(.col-md-offset-6 all);
+	&:extend(.col-lg-offset-6 all);
+}
+.mde-col-offset-7{
+	&:extend(.col-sm-offset-7 all);
+	&:extend(.col-md-offset-7 all);
+	&:extend(.col-lg-offset-7 all);
+}
+.mde-col-offset-8{
+	&:extend(.col-sm-offset-8 all);
+	&:extend(.col-md-offset-8 all);
+	&:extend(.col-lg-offset-8 all);
+}
+.mde-col-offset-9{
+	&:extend(.col-sm-offset-9 all);
+	&:extend(.col-md-offset-9 all);
+	&:extend(.col-lg-offset-9 all);
+}
+.mde-col-offset-10{
+	&:extend(.col-sm-offset-10 all);
+	&:extend(.col-md-offset-10 all);
+	&:extend(.col-lg-offset-10 all);
+}
+.mde-col-offset-11{
+	&:extend(.col-sm-offset-11 all);
+	&:extend(.col-md-offset-11 all);
+	&:extend(.col-lg-offset-11 all);
+}
+.mde-col-offset-12{
+	&:extend(.col-sm-offset-12 all);
+	&:extend(.col-md-offset-12 all);
+	&:extend(.col-lg-offset-12 all);
+}
+
+// Form overrides
+
+/*
+The following classes are to be used where one needs two fields in one line e.g
+on date-pickers. Using the normal mde-col-* brings about alignment issues.
+Instead use the following classes.
+
+The first class e.g part-col-6-1 should be the first (left) field
+then the second class e.g part-col-6-2 should be the second (on the right)
+*/
+.part-col-1-1 {
+	&:extend(.mde-col-1);
+    padding-left: 0;
+}
+
+.part-col-1-2 {
+	&:extend(.mde-col-1);
+    padding-right: 0;
+}
+
+.part-col-3-1 {
+    &:extend(.mde-col-3);
+    padding-left: 0;
+}
+
+.part-col-3-2 {
+    &:extend(.mde-col-3);
+    padding-right: 0;
+}
+
+.part-col-3-3 {
+    &:extend(.mde-col-3);
+    padding-left: 22px;
+}
+
+.part-col-4-1 {
+	&:extend(.mde-col-4);
+    padding-left: 0;
+}
+
+.part-col-4-2 {
+	&:extend(.mde-col-4);
+    padding-right: 0;
+}
+
+.part-col-5-1 {
+	&:extend(.mde-col-5);
+    padding-left: 0;
+}
+
+.part-col-5-2 {
+	&:extend(.mde-col-5);
+    padding-right: 0;
+}
+
+.part-col-6-1 {
+	&:extend(.mde-col-6);
+    padding-left: 0;
+}
+
+.part-col-6-2 {
+	&:extend(.mde-col-6);
+    padding-right: 0;
+}
+
+.part-col-7-1 {
+	&:extend(.mde-col-7);
+    padding-left: 0;
+}
+
+.part-col-7-2 {
+	&:extend(.mde-col-7);
+    padding-right: 0;
+}
+
+.part-col-8-1 {
+	&:extend(.mde-col-8);
+    padding-left: 0;
+}
+
+.part-col-8-2 {
+	&:extend(.mde-col-8);
+    padding-right: 0;
+}
+
+.part-col-9-1 {
+	&:extend(.mde-col-9);
+    padding-left: 0;
+}
+
+.part-col-9-2 {
+	&:extend(.mde-col-9);
+    padding-right: 0;
+}
+
+.part-col-10-1 {
+	&:extend(.mde-col-10);
+    padding-left: 0;
+}
+
+.part-col-10-2 {
+	&:extend(.mde-col-10);
+    padding-right: 0;
+}
+
+.part-col-11-1 {
+	&:extend(.mde-col-11);
+    padding-left: 0;
+}
+
+.part-col-11-2 {
+	&:extend(.mde-col-11);
+    padding-right: 0;
+}
+
+.part-col-12-1 {
+	&:extend(.mde-col-12);
+    padding-left: 0;
+}
+
+.part-col-12-2 {
+	&:extend(.mde-col-12);
+    padding-right: 0;
+}
+
+.part-col-12-no-pad {
+	&:extend(.mde-col-12);
+    padding-right: 0;
+    padding-left: 0;
+}

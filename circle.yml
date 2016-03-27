@@ -4,7 +4,10 @@ machine:
 
 
 dependencies:
+    pre:
+        - sudo ln -sf /usr/share/zoneinfo/Africa/Nairobi /etc/localtime
     override:
+        - rm -rf node_modules
         - npm install:
             environment:
                 PATH: "$(npm bin):$PATH"
@@ -15,14 +18,9 @@ test:
         environment:
             PATH: "$(npm bin):$PATH"
 
+  post:
+    - cp junitxml_report/report.xml $CIRCLE_TEST_REPORTS
 
-deployment:
-    production:
-        branch: master
-        commands:
-            - node deploy.js:
-                environment:
-                    PATH: "$(npm bin):$PATH"
 general:
     artifacts:
         - coverage

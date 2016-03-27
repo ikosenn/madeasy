@@ -1,0 +1,21 @@
+
+  	<!--loop through each element in model array-->
+
+<div class="{{hideRepeat}}">
+  <div ng-repeat="element in model[options.key]" ng-init="fields = copyFields(to.fields)">
+     <div>
+         <formly-form fields="fields"
+             model="element"
+             form="form"
+             class="part-col-11-1">
+         </formly-form>
+         <div>
+             <i class="fa fa-times fa-2x text text-danger pointer-cursor part-col-1-2"
+                 ng-click="model[options.key].splice($index, 1)" title="Remove this field"></i>
+         </div>
+    </div>
+</div>
+  <button type="button" class="btn btn-sm btn-default" ng-click="addNew()" >
+      {{to.btnText}}
+  </button>
+</div>

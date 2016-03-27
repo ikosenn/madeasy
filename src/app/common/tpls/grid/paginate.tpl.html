@@ -1,42 +1,82 @@
-<div class="pull-left">
-    <span class="paging-action-buttons">
-        {{paginator.getPageStartIndex()}}&nbsp;-&nbsp;
-        {{paginator.getPageEndIndex()}}&nbsp;of&nbsp;
-        {{paginator.getTotalItemCount()}}&nbsp;
-        items&nbsp;|&nbsp;
-        {{paginator.getItemCountPerPage()}}&nbsp;
-        Items&nbsp;
-        per&nbsp;
-        page&nbsp;
-    </span>
-    <span class="page-label">
-        Page&nbsp;
-        {{paginator.getCurrentPage()}}&nbsp;of&nbsp;
-        {{paginator.getTotalPages()}}&nbsp;
-    </span>
-</div>
-<div class="pull-right">
-    <ul class="pagination mtn">
-        <li class="paginate_button first" ng-click="firstPage()">
-            <a id="first">
+<div class="panel-footer">
+  <div class="row">
+    <div class="sil-col-6">
+      <table class="table table-responsive">
+        <tbody>
+          <tr>
+          <td id="paging-info">
+            <strong>{{paginator.getPageStartIndex()}}
+            </strong>
+          </td>
+          <td id="paging-info">-</td>
+          <td id="paging-info">
+            <strong>{{paginator.getPageEndIndex()}}</strong>
+          </td>
+          <td id="paging-info">of</td>
+          <td id="paging-info">
+            <strong>{{paginator.getTotalItemCount()}}</strong>
+          </td>
+          <td id="paging-info">records</td>
+          <td id="paging-info">
+            <strong>{{paginator.getCurrentPage()}}</strong>
+          </td>
+          <td id="paging-info">of</td>
+          <td id="paging-info">
+            <strong>{{paginator.getTotalPages()}}</strong>
+          </td>
+          <td id="paging-info">Pages</td>
+          <td id="paging-info">Enter</td>
+          <td id="paging-info">Page</td>
+          <td id="paging-info">
+            <input type="number" class="form-control"
+              ng-model="pageParam" id="page-number-input"/>
+          </td>
+          <td id="paging-info">
+            <button class="btn btn-success btn-sm"
+              ng-click="goToPage(pageParam)">Go</button>
+          </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="sil-col-4">
+      <span class="notify">{{notify(pageParam)}}</span>
+    </div>
+    <div class="sil-col-2">
+      <table class="table table-responsive">
+        <tbody>
+          <tr>
+            <td id="paging-info">
+              <button id="paging-navigation"
+                  class="btn btn-default btn-sm"
+                  ng-click="firstPage()">
                 <i class="fa fa-angle-double-left"></i>
-            </a>
-        </li>
-        <li class="paginate_button previous" ng-click="previousPage()">
-            <a id="previous">
+              </button>
+            </td>
+            <td id="paging-info">
+              <button id="paging-navigation"
+                  class="btn btn-default btn-sm"
+                  ng-click="previousPage()">
                 <i class="fa fa-angle-left"></i>
-            </a>
-        </li>
-
-        <li class="paginate_button next" ng-click="nextPage()">
-            <a>
+              </button>
+            </td>
+            <td id="paging-info">
+              <button id="paging-navigation"
+                  class="btn btn-default btn-sm"
+                  ng-click="nextPage()">
                 <i class="fa fa-angle-right"></i>
-            </a>
-        </li>
-        <li class="paginate_button last" ng-click="lastPage()">
-            <a id="last">
+              </button>
+            </td>
+            <td id="paging-info">
+              <button id="paging-navigation"
+                  class="btn btn-default btn-sm"
+                  ng-click="lastPage()">
                 <i class="fa fa-angle-double-right"></i>
-            </a>
-        </li>
-    </ul>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>

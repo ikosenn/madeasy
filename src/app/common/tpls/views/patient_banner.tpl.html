@@ -1,0 +1,162 @@
+<div>
+    <div class="patient-info-heading">
+      <strong class="patient-header" ng-show="patientId">Patient Summary</strong>
+      <strong ng-show="!patientId" class="patient-header-spinner">Loading Patient Summary...</strong>
+      <i class="fa fa-spinner fa-spin fa-2x" ng-show="!patientId"></i>
+    </div>
+
+
+    <div ng-init="displayPatientBanner();" class="patient-info" ng-show="patientId">
+      <div class="pull-left">
+        <img ng-src="{{image}}" err-src="../assets/img/blue_guy.png"
+          id="patient-image"
+          alt="Patient Image"
+          title="Patient Image"
+          class="img img-thumbnail img-responsive">
+      </div>
+      <div class="media-body va-m">
+          <!--Upload Photo-->
+          <!-- Button trigger modal -->
+          <span class="upload-image pull-left"
+              ng-click="launchModal();"
+              madeasy-app-actions='edit.patient'>
+          <i class="fa fa-plus"></i>Update Picture
+          </span>
+            <!-- Modal starts here -->
+
+          <table class="table mbn table-responsive table-condensed">
+            <tbody>
+              <tr>
+                <td><strong>Patient ID:</strong></td>
+                <td>{{patientId}}</td>
+              </tr>
+              <tr>
+                <td><strong>Patient Name:</strong></td>
+                <td>{{firstName.toUpperCase();}} {{lastName.toUpperCase();}}</td>
+              </tr>
+              <tr>
+                <td><strong>Contact:</strong></td>
+                <td ng-show="manyContacts">
+                    {{contact[0].contact;}} <br/>
+                   {{contact[1].contact;}}
+                </td>
+                <td ng-show="oneContact"> {{contact;}} </td>
+              </tr>
+              <tr>
+                <td><strong>Gender:</strong></td>
+                <td>{{gender}}</td>
+              </tr>
+              <tr>
+                <td><strong>Age:</strong></td>
+                <td>{{age}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        </div>
+      <div ng-init="loadAllergies();" class="patient-hold-info">
+          <div class="patient-info-heading">
+            <strong ng-show="loaded" class="patient-header-allergy">ALLERGIES</strong>
+            <strong ng-show="!loaded" class="patient-header-allergy-spinner">Loading Patient Allergies... </strong>
+            <i class="fa fa-spinner fa-spin fa-2x" ng-show="!loaded"></i>
+          </div>
+          <div class="patient-info">
+              <span class="text text-info" ng-show="allergy && registration_complete">
+                  <i class="fa fa-info-circle"></i> {{allergy;}}
+                  <br/><br/>
+                  <a class="btn btn-primary  btn-sm"
+                  ui-sref="patients.allergy.allergyIntolerance({
+                  patientID: patientID, personID: personID})" madeasy-app-actions>
+                  Add New Allergy</a>
+              </span>
+              <button class="sil-tbl-btn btn-warning btn-sm"
+                ui-sref="{{last_registration_state}}({patientID: patientID, personID: personID})"
+                ng-if="!registration_complete && loaded" madeasy-app-actions>
+                <i class="fa fa-edit"></i> Complete Registration First
+              </button>
+              <table class="table mbn table-responsive table-condensed"
+              ng-if="presentAllergies">
+                  <tbody>
+                  <tr ng-repeat="n in presentAllergies | limitTo:6">
+                      <td>{{n.allergy_substance_name.slice(0, 15)}}...</td>
+                      <td>
+                          <span class="label label-{{n.allergy_criticality_name | allergySeverity}}">
+                            {{n.allergy_criticality_name || "Undefined"}}
+                          </span>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>
+                      <br/>
+                        <button class="btn btn-primary btn-sm"
+                         ui-sref="patients.allergy.allergyIntolerance({patientID: patientID, personID: personID})" madeasy-app-actions>Add New Allergy</button>
+                      </td>
+                      <td ng-if="moreAllergies">
+                      <br/>
+                          <a href="#patients/detail/:patientID/allergies"
+                          ui-sref="patients.detail.allergies({patientID: patientID})" madeasy-app-actions
+                          >See {{ moreAllergies }} more... </a>
+                      </td>
+                  </tr>
+                  </tbody>
+              </table>
+          </div>
+      </div>
+
+      <div ng-init="loadVitals();" class="patient-hold-info">
+          <div class="patient-info-heading">
+            <strong ng-show="loaded" class="patient-header-vitals">VITALS</strong>
+            <strong ng-show="!loaded" class="patient-header-vitals-spinner">Loading Patient Vitals... </strong>
+            <i class="fa fa-spinner fa-spin fa-2x" ng-show="!loaded"></i>
+          </div>
+          <div class="patient-info">
+              <span class="text text-info" ng-show="vitals && registration_complete">
+                    <i class="fa fa-info-circle"></i> {{vitals;}}
+                  <br/><br/>
+                  <a class="btn btn-primary  btn-sm" ui-sref="visits.new({patientID: patientID, personID: personID})" madeasy-app-actions>
+                    Add New Vitals
+                </a>
+              </span>
+              <button class="sil-tbl-btn btn-warning btn-sm"
+                ui-sref="{{last_registration_state}}({patientID: patientID, personID: personID})"
+                ng-if="!registration_complete && loaded" madeasy-app-actions>
+                <i class="fa fa-edit"></i> Complete Registration First
+              </button>
+
+              <table class="table mbn table-responsive table-condensed"
+              ng-if="presentVitals">
+
+                  <span class="label label-warning" ng-if="presentVitals">
+                      {{presentVitals[0].time_taken | date:'medium'}}
+                  </span>
+
+                  <br></br>
+                  <tr>
+                      <td>Temperature</td>
+                      <td>{{presentVitals[0].temperature}} (°C)</td>
+                  </tr>
+                  <tr>
+                      <td>Blood Pressure</td>
+                      <td>{{presentVitals[0].systole}} /
+                      {{presentVitals[0].diastole}} (mm Hg)</td>
+                  </tr>
+                  <tr>
+                      <td>Respiratory Rate</td>
+                      <td>{{presentVitals[0].respiratory_rate}} breaths per minute</td>
+                  </tr>
+                  <tr>
+                      <td>Heart Rate</td>
+                      <td>{{presentVitals[0].pulse}} beats per minute</td>
+                  </tr>
+                  <tr>
+                    <td>
+                        <button class="btn btn-primary btn-sm"
+                             ui-sref="visits.new({patientID: patientID, personID: personID})" madeasy-app-actions>Add New Vitals
+                        </button>
+                    </td>
+                  </tr>
+              </table>
+          </div>
+      </div>
+
+</div>

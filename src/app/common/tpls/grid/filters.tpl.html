@@ -1,36 +1,100 @@
-<div class="panel panel-default">
-    <div class="panel-body">
-        <div class="sil-col-5">
-            <div class="form-group">
-                <div class="sil-col-4">
-                    <select ng-model="filterField" class="form-control"
-                            ng-options="filterField for filterField in metadata.filterFields">
-                    </select>
-                </div>
-                <div class="sil-col-7">
-                    <input class="form-control" ng-model="filterValue"
-                            type="text" placeholder="Filter {{resource}}"/>
-                </div>
-                <div class="sil-col-1">
-                    <button type="submit" class="btn btn-success"
-                            ng-click="filterData(filterField, filterValue)">Get Records
-                    </button>
-                </div>
+<div class="panel-header">
+  <div class="row pt20">
+    <div class="sil-col-7">
+      <div class="sil-col-4">
+        <select ng-model="filterField" class="form-control"
+          ng-options="filterField for filterField in
+            filterFieldsFunc(metadata.filterFields)"
+          ng-change="getDataType(metadata.filterFields,
+            filterField)">
+          <option value="">Filter {{resource}} by...</option>
+        </select>
+      </div>
+      <div class="sil-col-8">
+        <form ng-submit="filterData(filterField, filterValue)">
+          <div class="input-group"
+            ng-show="dataType == 'text'">
+            <input class="form-control" type="text"
+              ng-model="filterValue"
+              placeholder="Filter {{resource}} by {{filterField}}"/>
+            <span class="input-group-btn">
+              <button class="btn btn-default btn-lg">
+                <i class="fa fa-filter"></i>
+              </button>
+            </span>
+          </div>
+          <div class="input-group"
+            ng-show="dataType == 'number'">
+            <input class="form-control" type="number"
+              ng-model="filterValue"
+              placeholder="Filter {{resource}} by {{filterField}}"/>
+            <span class="input-group-btn">
+              <button class="btn btn-default btn-lg">
+                <i class="fa fa-filter"></i>
+              </button>
+            </span>
+          </div>
+          <div class="input-group"
+            ng-show="dataType == 'date-time'">
+            <div class="sil-col-5">
+              <input class="form-control" type="text"
+                placeholder="From"/>
             </div>
-        </div>
-        <div class="sil-col-1"></div>
-        <div class="sil-col-6 pull-right">
-            <div class="form-group">
-                <div class="sil-col-10">
-                    <input class="form-control" ng-model="searchParam"
-                            type="text" placeholder="Search {{resource}}"/>
-                </div>
-                <div class="sil-col-1">
-                    <button type="submit" class="btn btn-success"
-                            ng-click="searchData(searchParam)">Search
-                    </button>
-                </div>
+            <div class="sil-col-5">
+              <input class="form-control" type="text"
+                placeholder="To"/>
             </div>
-        </div>
+          </div>
+          <div class="input-group"
+            ng-show="dataType == 'method'">
+            <input class="form-control" type="text"
+              ng-model="filterValue"
+              placeholder="Filter {{resource}} by those {{filterField}}"/>
+            <span class="input-group-btn">
+              <button class="btn btn-default btn-lg">
+                <i class="fa fa-filter"></i>
+              </button>
+            </span>
+          </div>
+          <div class="input-group"
+            ng-show="dataType == 'boolean'">
+            <input class="form-control" type="text"
+              ng-model="filterValue"
+              placeholder="Filter {{resource}} by {{filterField}}"/>
+            <span class="input-group-btn">
+              <button class="btn btn-default btn-lg">
+                <i class="fa fa-filter"></i>
+              </button>
+            </span>
+          </div>
+          <div class="input-group"
+            ng-show="dataType == 'choice'">
+            <input class="form-control" type="text"
+              ng-model="filterValue"
+              placeholder="Filter {{resource}} by {{filterField}}"/>
+            <span class="input-group-btn">
+              <button class="btn btn-default btn-lg">
+                <i class="fa fa-filter"></i>
+              </button>
+            </span>
+          </div>
+        </form>
+      </div>
     </div>
+    <div class="sil-col-5 pull-right">
+      <div class="sil-col-12">
+        <form ng-submit="searchData(searchParam)">
+          <div class="input-group">
+            <input class="form-control" ng-model="searchParam"
+              type="text" placeholder="Search {{resource}}"/>
+            <span class="input-group-btn">
+              <button class="btn btn-default btn-lg">
+                <i class="fa fa-search"></i>
+              </button>
+            </span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 </div>
