@@ -3,7 +3,7 @@
 
     angular.module("madeasy.common.directives.alerts", [])
 
-    .directive("silJsDataAlerts",[function () {
+    .directive("madeasyJsDataAlerts",[function () {
         /**
         *   This directive will handle unpacking errors and validations
         *   from the backend. JS Data returns validations as an array of objects or

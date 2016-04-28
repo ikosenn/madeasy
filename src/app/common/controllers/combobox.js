@@ -3,7 +3,6 @@
 
     angular.module("madeasy.common.controllers.combobox", [
         "madeasy.common.services",
-        "madeasy.resources.auth.user"
     ])
 
     .controller("madeasy.common.comboboxController", [

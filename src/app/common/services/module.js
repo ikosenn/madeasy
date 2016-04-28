@@ -10,6 +10,7 @@
         "madeasy.common.imageValidator",
         "madeasy.common.services.js_data_alerts",
         "madeasy.common.formlyUtils",
-        "madeasy.common.manipulators.dateTime"
+        "madeasy.common.manipulators.dateTime",
+        "madeasy.common.services.apiRegistry"
     ]);
 })(angular);

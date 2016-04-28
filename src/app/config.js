@@ -2,13 +2,10 @@
     "use strict";
 
     angular.module("madeasy.config", [
-        "js-data",
         "ui.router",
         "formly",
         "madeasy.auth",
         "ui.select",
-        "madeasy.resources.common.jsDataUtils",
-        "madeasy.resources.common.deserialize_drf",
         "angular-loading-bar",
         "madeasy.common.formlyUtils"
     ])
@@ -80,14 +77,6 @@
             "madeasy.networking.interceptors.connection");
 
     }])
-
-    .run(["madeasy.resource.deserializeDRF", "DSHttpAdapter", "SERVER_URL",
-        function (desDrf, httpAdapter, SERVER_URL) {
-            httpAdapter.defaults.deserialize = desDrf.deserializeFunc;
-            httpAdapter.defaults.basePath = SERVER_URL;
-            httpAdapter.defaults.forceTrailingSlash = true;
-        }
-    ])
 
     .run(["madeasy.actions.pageChecker", function (pageChecker) {
             pageChecker.startListening();

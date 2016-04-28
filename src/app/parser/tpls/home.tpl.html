@@ -1,0 +1,25 @@
+<div class="container-fluid">
+    <div class="mt70">
+        <div class="row">
+          <div class="mde-col-offset-2 mde-col-8">
+              <p class="logo-text text-center">Madeasy</p>
+          </div>
+        </div>
+        <div class="row">
+            <div class="mde-col-offset-2 mde-col-8 ">
+                <madeasy-js-data-alerts></madeasy-js-data-alerts>
+                <form novalidate ng-submit="submitQuery()" name="queryForm">
+                    <formly-form fields ="fields" model="parser" form="queryForm"></formly-form>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="mde-col-offset-2 mde-col-8 text-center mt10">
+                <b>Some of the things you can ask me:</b>
+                <p>display my booked flights<br>
+                    show me flights to [city] from [city] on [date]<br>
+                    show me flights to [city] from [city] on [date] with price below [price]
+                </p>
+            </div>
+    </div>
+</div>
