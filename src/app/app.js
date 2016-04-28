@@ -6,7 +6,6 @@
         "ngAnimate",
         "templates-app",
         "ui.bootstrap",
-        "js-data",
         "formly",
         "formlyBootstrap",
         "ngMessages",

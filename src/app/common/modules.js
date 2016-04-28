@@ -6,7 +6,6 @@
         "madeasy.common.routes",
         "madeasy.common.services",
         "madeasy.common.controllers",
-        "madeasy.resources.common",
         "madeasy.common.formly"
     ]);
 })(angular);

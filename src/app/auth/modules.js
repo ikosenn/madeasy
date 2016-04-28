@@ -7,7 +7,6 @@
         "madeasy.auth.oauth2",
         "madeasy.auth.services",
         "madeasy.exceptions",
-        "madeasy.resources.auth",
         "madeasy.auth.formly"
     ]);
 })(angular);

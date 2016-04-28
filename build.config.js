@@ -44,8 +44,7 @@ module.exports = {
      */
     test_files: {
         js: [
-            "vendor/angular-mocks/angular-mocks.js",
-            "vendor/js-data-angular-mocks/dist/js-data-angular-mocks.js"
+            "vendor/angular-mocks/angular-mocks.js"
         ]
     },
 
@@ -74,13 +73,11 @@ module.exports = {
             "vendor/underscore/underscore.js",
             "vendor/bootstrap/dist/js/bootstrap.js",
             "vendor/angular-animate/angular-animate.js",
+            "vendor/api-check/dist/api-check.js",
             "vendor/angular-ui-router/release/angular-ui-router.js",
             "vendor/angular-bootstrap/ui-bootstrap.js",
             "vendor/angular-bootstrap/ui-bootstrap-tpls.js",
             "vendor/angular-toastr/dist/angular-toastr.js",
-            "vendor/js-data/dist/js-data.js",
-            "vendor/js-data-angular/dist/js-data-angular.js",
-            "vendor/api-check/dist/api-check.js",
             "vendor/angular-formly/dist/formly.js",
             "vendor/angular-formly-templates-bootstrap/dist/" +
                 "angular-formly-templates-bootstrap.js",
@@ -89,7 +86,8 @@ module.exports = {
             "vendor/angular-loading-bar/build/loading-bar.js",
             "vendor/angular-breadcrumb/dist/angular-breadcrumb.js",
             "vendor/ui-select/dist/select.js",
-            "vendor/moment/moment.js"
+            "vendor/moment/moment.js",
+            "node_modules/sil-datalayer/dist/sil-datalayer.js",
         ],
         css: [
         ],
