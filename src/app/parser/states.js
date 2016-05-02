@@ -19,6 +19,21 @@
                         templateUrl: "parser/tpls/home.tpl.html"
                     }
                 }
+            }).state("book", {
+                ncyBreadcrumb: {
+                    label: "book"
+                },
+                params: {
+                    bookDetails: null
+                },
+                parent: "base_state",
+                url :"/book",
+                views: {
+                    "content@":{
+                        controller: "madeasy.parser.controllers.book",
+                        templateUrl: "parser/tpls/book.tpl.html"
+                    }
+                }
             });
     }]);
 })(angular);

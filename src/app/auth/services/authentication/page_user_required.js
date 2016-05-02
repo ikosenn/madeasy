@@ -11,14 +11,14 @@
     function pageUserRequired ($log, $injector, authConfig) {
         return {
             canView: function canViewFunction (fromParams, toParams) {
-
+                var notRequireUser = false;
                 if (_.has(toParams, "data")) {
-                    var notRequireUser = toParams.data.requireUser === false;
-                    var isLoggedIn = authConfig.isLoggedIn();
+                    notRequireUser = toParams.data.requireUser === false;
+                }
+                var isLoggedIn = authConfig.isLoggedIn();
 
-                    if (!notRequireUser && !isLoggedIn) {
-                        return false;
-                    }
+                if (!notRequireUser && !isLoggedIn) {
+                    return false;
                 }
                 return true;
             },
