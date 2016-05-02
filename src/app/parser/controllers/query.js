@@ -16,17 +16,17 @@
         $scope.fields = formlyService.getFields();
         $scope.submitQuery = function () {
             var error_fxn = function (error) {
-                console.log(error);
                 $scope.alert = errs.showError(error, "Error");
             };
 
             var success_fxn = function (data) {
-                console.log(data);
-                //$state.go("auth_login", {reset_password: true});
+                if (data.data.command_type === "book") {
+                    $state.go("book", {"bookDetails": data});
+                }
+
             };
 
             if ($scope.queryForm.$valid) {
-                console.log($scope.parser);
                 silDataLayer.create("parse_query", $scope.parser)
                     .then(success_fxn, error_fxn);
             }

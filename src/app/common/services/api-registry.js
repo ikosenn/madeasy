@@ -12,5 +12,9 @@
         silDataStoreFactory("parse_query",{
             url: SERVER_URL + "/api/parser/parse_query/"
         });
+
+        silDataStoreFactory("create_trip",{
+            url: SERVER_URL + "/api/airline/trips/create_trip/"
+        });
     }
 })(window.angular);

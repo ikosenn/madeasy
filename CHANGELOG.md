@@ -7,3 +7,7 @@ CHANGELOG
 ## 0.0.2 - 2016-04-28
 ###
 - Add parser homepage
+
+## 0.0.3 - 2016-05-02
+###
+- Allow booking of flights
