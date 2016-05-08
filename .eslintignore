@@ -1,0 +1,12 @@
+build
+node_modules
+vendor
+bower_components
+lib-cov
+coverage
+.idea
+bin
+PhantomJS 1.9 (Linux)
+npm-debug.log
+.DS_Store
+junitxml_report/

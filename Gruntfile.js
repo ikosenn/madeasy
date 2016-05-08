@@ -7,8 +7,6 @@ module.exports = function ( grunt ) {
      */
     grunt.loadNpmTasks("grunt-contrib-clean");
     grunt.loadNpmTasks("grunt-contrib-copy");
-    grunt.loadNpmTasks("grunt-contrib-jshint");
-    grunt.loadNpmTasks("grunt-jscs");
     grunt.loadNpmTasks("grunt-contrib-concat");
     grunt.loadNpmTasks("grunt-contrib-less");
     grunt.loadNpmTasks("grunt-karma");
@@ -18,6 +16,7 @@ module.exports = function ( grunt ) {
     grunt.loadNpmTasks("grunt-babel");
     grunt.loadNpmTasks("grunt-glob");
     grunt.loadNpmTasks("grunt-uncss");
+    grunt.loadNpmTasks("grunt-eslint");
 
     /**
      * Load in our build configuration file.
@@ -273,142 +272,17 @@ module.exports = function ( grunt ) {
                 }
             }
         },
-
-        /**
-         * `jshint` defines the rules of our linter as well as which files we
-         * should check. This file, all javascript sources, and all our unit
-         * tests are linted based on the policies listed in `options`. But we
-         * can also specify exclusionary patterns by prefixing them with an
-         * exclamation point (!); this is useful when code comes from a
-         * third party but is nonetheless inside `src/`.
-         */
-        jshint: {
-            src: [
-                "<%= app_files.js %>"
-            ],
-            test: [
-                "<%= app_files.jsunit %>"
-            ],
-            gruntfile: [
-                "Gruntfile.js", "build.config.js"
-            ],
-            config_files: [
-                ".jshintrc", "bower.json","package.json", ".bowerrc",
-                "src/<%= settings_file %>"
-            ],
+        eslint: {
             options: {
-                curly: true,
-                immed: true,
-                newcap: true,
-                noarg: true,
-                sub: true,
-                boss: true,
-                eqnull: true,
-                jshintrc: ".jshintrc"
+                config: ".eslintrc.json",
+                reset: true
             },
-            globals: {}
+            target: ["<%= app_files.js %>"],
+            test: [
+                "<%= app_files.jsunit %>",
+                "<%= app_files.jse2e %>"
+            ]
         },
-
-        uncss: {
-              dist: {
-                files: {
-                  "tidy.css": ["build/index.html"]
-                }
-              }
-        },
-
-        jsDoc: {
-        checkAnnotations: true,
-        checkParamExistence: true,
-        checkParamNames: true,
-        requireParamTypes: true,
-        checkRedundantParams: true,
-        checkReturnTypes: true,
-        checkRedundantReturns: true,
-        requireReturnTypes: true,
-        checkTypes: true,
-        checkRedundantAccess: true,
-        leadingUnderscoreAccess: "protected",
-        enforceExistence: true,
-        requireHyphenBeforeDescription: true,
-        requireNewlineAfterDescription: true,
-        disallowNewlineAfterDescription: true,
-        requireDescriptionCompleteSentence: true,
-        requireParamDescription: true,
-        requireReturnDescription: true
-        },
-
-        jscs: {
-            src: [
-                "<%= app_files.js %>",
-                "<%= app_files.jsunit %>"
-            ],
-            preset: "google",
-            options: {
-                verbose: true,
-                requireCurlyBraces: [
-                    "if",
-                    "else",
-                    "for",
-                    "while",
-                    "do",
-                    "try",
-                    "catch"
-                ],
-                requireOperatorBeforeLineBreak: true,
-                maximumLineLength: {
-                    "value": 85,
-                    "allExcept": ["comments", "regex"]
-                },
-                validateIndentation: 4,
-                validateQuoteMarks: true,
-                disallowMultipleLineBreaks: true,
-                disallowMultipleLineStrings: true,
-                disallowMixedSpacesAndTabs: true,
-                disallowTrailingWhitespace: true,
-                disallowUnusedParams: true,
-                disallowYodaConditions: true,
-                disallowTrailingComma: true,
-                disallowNestedTernaries: true,
-                disallowTabs: true,
-                disallowImplicitTypeConversion: ["numeric", "boolean", "binary",
-                "string"],
-                validateOrderInObjectKeys: "asc",
-                disallowSpaceAfterPrefixUnaryOperators: true,
-                requireSpaceAfterKeywords: [
-                    "if",
-                    "else",
-                    "for",
-                    "while",
-                    "do",
-                    "switch",
-                    "return",
-                    "try",
-                    "catch"
-                ],
-                requireSpaceBeforeBinaryOperators: [
-                    "=", "+=", "-=", "*=", "/=", "%=", "<<=", ">>=", ">>>=",
-                    "&=", "|=", "^=", "+=",
-
-                    "+", "-", "*", "/", "%", "<<", ">>", ">>>", "&",
-                    "|", "^", "&&", "||", "===", "==", ">=",
-                    "<=", "<", ">", "!=", "!=="
-                ],
-                requireSpaceAfterBinaryOperators: true,
-                disallowMultipleSpaces: {"allowEOLComments": true},
-                requireCapitalizedComments: true,
-                validateCommentPosition: { position: "above" },
-                requireAlignedMultilineParams: true,
-                requireSpacesInConditionalExpression: true,
-                requireSpaceBeforeBlockStatements: true,
-                requireSpacesInForStatement: true,
-                requireLineFeedAtFileEnd: true,
-                requireSpacesInFunctionExpression: {
-                    "beforeOpeningCurlyBrace": true
-                }
-            }
-        },
-
         /**
          * HTML2JS is a Grunt plugin that takes all of your template files and
          * places them into JavaScript files as strings that are added to
@@ -423,7 +297,7 @@ module.exports = function ( grunt ) {
                 options: {
                     base: "src/app"
                 },
-                src: [ "<%= app_files.atpl %>" ],
+                src: ["<%= app_files.atpl %>"],
                 dest: "<%= build_dir %>/templates-app.js"
             },
 
@@ -639,13 +513,13 @@ module.exports = function ( grunt ) {
     /**
      * The default task is to build and compile.
      */
-    grunt.registerTask( "default", [ "build", "babel", "compile" ] );
+    grunt.registerTask( "default", ["build", "babel", "compile"]);
 
     /**
      * The `build` task gets your app ready to run for development and testing.
      */
     grunt.registerTask( "build", [
-        "clean", "html2js", "jshint", "jscs", "less:build", "concat:build_css",
+        "clean", "html2js", "eslint", "less:build", "concat:build_css",
         "copy:build_app_assets", "copy:build_vendor_assets",
         "copy:build_app_settings", "copy:build_appjs", "copy:build_vendorjs",
         "index:build", "karmaconfig"
@@ -661,7 +535,7 @@ module.exports = function ( grunt ) {
         "concat:compile_js", "uglify", "index:compile"
     ]);
 
-    grunt.registerTask("test", ["build", "babel", "karma", ]);
+    grunt.registerTask("test", ["build", "babel", "karma"]);
 
     /**
      * A utility function to get all app JavaScript sources.
