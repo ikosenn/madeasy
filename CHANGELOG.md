@@ -11,3 +11,8 @@ CHANGELOG
 ## 0.0.3 - 2016-05-02
 ###
 - Allow booking of flights
+
+## 0.0.4 - 2016-05-08
+###
+- Add Parser correctness and response time graphs
+- Remove jscs and jslint for more advanced eslint

@@ -10,6 +10,7 @@
         "formlyBootstrap",
         "ngMessages",
         "ncy-angular-breadcrumb",
+        "chart.js",
 
         //Modules
         "madeasy.common",
@@ -17,7 +18,8 @@
         "madeasy.config",
         "madeasy.layout",
         "madeasy.constants",
-        "madeasy.parser"
+        "madeasy.parser",
+        "madeasy.admin"
     ];
 
     angular.module("madeasyApp", dependencies);

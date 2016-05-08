@@ -17,4 +17,4 @@
             restrict: "E"
         };
     }
-})(angular);
+})(window.angular);

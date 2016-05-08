@@ -3,7 +3,7 @@
 
     angular.module("madeasy.common.directives.sidebar", [])
 
-    .directive("silSidebar", function () {
+    .directive("madeasySidebar", function () {
         return {
             replace: true,
             restrict: "E",

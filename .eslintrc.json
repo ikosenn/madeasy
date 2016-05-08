@@ -1,0 +1,101 @@
+{
+  "rules": {
+    "array-bracket-spacing": 2,
+    "block-spacing": [
+      2,
+      "never"
+    ],
+    "curly": [
+      "error"
+    ],
+    "dot-notation": 2,
+    "eqeqeq": [
+      "error",
+      "smart"
+    ],
+    "max-len": [
+      "error",
+      85,
+      4,
+      {
+        "ignoreUrls": true
+      }
+    ],
+    "no-console": 0,
+    "no-eval": 2,
+    "no-multi-spaces": 2,
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 2,
+        "maxEOF": 1
+      }
+    ],
+    "no-trailing-spaces": [
+      "error",
+      {
+        "skipBlankLines": true
+      }
+    ],
+    "no-unused-expressions": 2,
+    "semi": [
+      2,
+      "always"
+    ],
+    "space-before-blocks": 2,
+    "valid-typeof": 2,
+    "no-multi-str": [
+      "error"
+    ],
+    "no-mixed-spaces-and-tabs": [
+      "error",
+      "smart-tabs"
+    ],
+    "yoda": [
+      "error",
+      "never"
+    ],
+    "comma-dangle": [
+      "error",
+      "never"
+    ],
+    "no-implicit-coercion": [
+      "error"
+    ],
+    "eol-last": [
+      "error"
+    ],
+    "no-bitwise": [
+      "error"
+    ],
+    "no-undef": [
+      "error"
+    ],
+    "no-use-before-define": [
+      "error",
+      "nofunc"
+    ],
+    "no-eq-null": [
+      "error"
+    ],
+    "no-unused-vars": [
+      "error"
+    ],
+    "strict": [
+      "error",
+      "function"
+    ]
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true,
+    "jasmine": true,
+    "protractor": true
+  },
+  "extends": "eslint:recommended",
+  "globals": {
+    "angular": false,
+    "inject": false
+  }
+}

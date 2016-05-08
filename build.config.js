@@ -88,6 +88,8 @@ module.exports = {
             "vendor/ui-select/dist/select.js",
             "vendor/moment/moment.js",
             "node_modules/sil-datalayer/dist/sil-datalayer.js",
+            "vendor/Chart.js/Chart.js",
+            "vendor/angular-chart.js/angular-chart.js"
         ],
         css: [
         ],
