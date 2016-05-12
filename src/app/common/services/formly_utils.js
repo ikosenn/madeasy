@@ -4,7 +4,8 @@
     angular.module("madeasy.common.formlyUtils", [
         "formly",
         "formlyBootstrap",
-        "ui.bootstrap"
+        "ui.bootstrap",
+        "madeasy.common.components.micCheck"
     ])
 
     .service("madeasy.common.formly.formlyConfig",
@@ -83,6 +84,15 @@
                         controller: "madeasy.common.comboboxController",
                         name: "combobox",
                         templateUrl: "common/tpls/combobox.tpl.html",
+                        wrapper: ["bootstrapLabel", "bootstrapHasError"]
+                    },
+                    {
+
+                        name: "voice-input",
+                        template: `
+                            <mic-check formly-model="model[options.key]">
+                            </mic-check>`
+                        ,
                         wrapper: ["bootstrapLabel", "bootstrapHasError"]
                     },
                     {

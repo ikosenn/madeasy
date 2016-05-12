@@ -96,6 +96,7 @@
   "extends": "eslint:recommended",
   "globals": {
     "angular": false,
-    "inject": false
+    "inject": false,
+    "webkitSpeechRecognition": true
   }
 }
