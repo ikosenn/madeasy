@@ -1,4 +1,3 @@
-  // jscs:disable
 (function(angular) {
     "use strict";
     angular.module("madeasy.parser.components.bookingCard", [

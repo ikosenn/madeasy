@@ -10,17 +10,13 @@
             var fields = [
                 {
                     "key": "query",
+                    "type": "voice-input",
                     "templateOptions": {
-                        "addonRight": {
-                            "class": "fa fa-search"
-                        },
                         "reqValidationMsg": "Please provide a query here",
-                        "required": true,
-                        "type": "text"
-                    },
-                    "type": "input"
-                }
-            ];
+                        "required": true
+                    }
+            }
+        ];
             return fields;
         }
 
