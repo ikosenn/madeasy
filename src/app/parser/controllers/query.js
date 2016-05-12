@@ -27,7 +27,6 @@
             };
 
             if ($scope.queryForm.$valid) {
-                console.log($scope.parser);
                 silDataLayer.create("parse_query", $scope.parser)
                     .then(success_fxn, error_fxn);
             }

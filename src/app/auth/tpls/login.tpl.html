@@ -1,4 +1,4 @@
-<sil-js-data-alerts></sil-js-data-alerts>
+<madeasy-js-data-alerts></madeasy-js-data-alerts>
 
 <div class="alert alert-success"
   ng-if="params.reset_password||params.reset_password_confirm||params.change_pwd">
@@ -16,9 +16,9 @@
           <p><a href="#"></a></p>
     </div>
     <!-- end section -->
-      <div class="section">
-            <p><a href="/password/reset">Lost password?</a></p>
-      </div>
+    <div class="section">
+          <p>Don't have an account? <a ui-sref="auth_signup">Sign Up</a></p>
+    </div>
     <button class="btn btn-primary" type="submit" id="loginFormSubmit">
         <span class="fa fa-sign-in pr5"></span> Log in
     </button>

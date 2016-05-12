@@ -78,6 +78,15 @@
                         templateUrl: "auth/tpls/change_password.tpl.html"
                     }
                 }
+            }).state("auth_signup", {
+                parent: "auth_base",
+                url: "/auth/signup",
+                views:{
+                    "form":{
+                        controller: "madeasy.auth.controllers.signUp",
+                        templateUrl: "auth/tpls/signup.tpl.html"
+                    }
+                }
             });
     }]);
 
