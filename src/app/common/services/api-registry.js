@@ -24,5 +24,9 @@
         silDataStoreFactory("parser_response_day", {
             url: SERVER_URL + "/api/parser/parser_results/parser_response_day/"
         });
+
+        silDataStoreFactory("users", {
+            url: SERVER_URL + "/api/auth/create_user/"
+        });
     }
 })(window.angular);

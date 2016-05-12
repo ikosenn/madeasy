@@ -7,6 +7,7 @@
         "madeasy.auth.logoutAuth",
         "madeasy.auth.passwordReset",
         "madeasy.auth.passwordResetConfirm",
-        "madeasy.auth.userDetails"
+        "madeasy.auth.userDetails",
+        "madeasy.auth.signup"
     ]);
 })(angular);
