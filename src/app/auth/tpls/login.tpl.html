@@ -10,6 +10,10 @@
      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
   <p ng-if="params.timeout">Your session has expired. Kindly log in to the resume your session.</p>
 </div>
+<div class="alert alert-info" ng-if="params.new_user">
+     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+  <p>Your account has been created successfully.</p>
+</div>
 <form novalidate ng-submit="submitUser()" name="loginForm">
 <formly-form fields ="fields" model="loginForm.model" form="loginForm">
     <div class="section">

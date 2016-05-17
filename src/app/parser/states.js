@@ -34,6 +34,20 @@
                         templateUrl: "parser/tpls/book.tpl.html"
                     }
                 }
+            }).state("myFlights", {
+                ncyBreadcrumb: {
+                    label: "my flights"
+                },
+                params: {
+                    flightDetails: null
+                },
+                parent: "base_state",
+                url :"/my_flights",
+                views: {
+                    "content@":{
+                        templateUrl: "parser/tpls/my_flights.tpl.html"
+                    }
+                }
             });
     }]);
 })(angular);

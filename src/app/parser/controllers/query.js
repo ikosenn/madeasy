@@ -23,7 +23,10 @@
                 if (data.data.command_type === "book") {
                     $state.go("book", {"bookDetails": data});
                 }
+                else if (data.data.command_type === "my_flights") {
+                    $state.go("myFlights", {"flightDetails": data});
 
+                }
             };
 
             if ($scope.queryForm.$valid) {

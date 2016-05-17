@@ -16,3 +16,7 @@ CHANGELOG
 ###
 - Add Parser correctness and response time graphs
 - Remove jscs and jslint for more advanced eslint
+
+## 0.0.5 - 2016-05-17
+###
+- Add show my booked flights command UI
