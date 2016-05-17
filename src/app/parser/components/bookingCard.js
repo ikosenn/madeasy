@@ -13,6 +13,7 @@
         controllerAs: "bookingCrd",
         template: `
                     <div class="card card-shadow">
+                        <madeasy-js-data-alerts></madeasy-js-data-alerts>
                         <div class="card-heading">
                             <div class="card-dest pull-left">
                                 <strong>
@@ -20,7 +21,7 @@
                                     {{bookingCrd.tripOptions.destination}}</strong>
                             </div>
                             <div class="card-price pull-right">
-                                <i class="fa fa-tag"> $ {{bookingCrd.tripOptions.legs[bookingCrd.cardIndex].price}}</i>
+                                <i class="fa fa-tag"> {{bookingCrd.tripOptions.legs[bookingCrd.cardIndex].price}}</i>
                             </div>
                         <div>
                         <div class="clearfix"></div>
@@ -32,8 +33,11 @@
                                     {{segment.stop_airport}}
                                 </label>
                                 <span class="airline-small">{{segment.airline}}</span>
+                                <span class="date">
+                                {{segment.start_time| date: 'MMM d'}} <br>
+                                </span>
+                              <span class="datetime">
 
-                              <span class="date">
                                 {{segment.start_time| date: 'H:mm'}} -
                                 {{segment.stop_time| date: 'H:mm'}}
                             </span>
@@ -52,8 +56,8 @@
     })
 
     .controller("madeasy.parser.controller.bookingCard", BookingCard);
-    BookingCard.$inject = ["$rootScope", "$state", "silDataLayer", "errorMessage"];
-    function BookingCard($rootScope, $state, silDataLayer, errs) {
+    BookingCard.$inject = ["$scope", "$state", "silDataLayer", "errorMessage"];
+    function BookingCard($scope, $state, silDataLayer, errs) {
         var self = this;
 
         self.$onInit = function () {
@@ -61,12 +65,12 @@
         };
 
         var success_fxn = function () {
-            $rootScope.alert = errs.showSuccess(
-                "Flight was booked successfully", "Success");
+            $scope.alert = errs.showSuccess(
+                "Successfully booked", "Ok");
         };
 
         var error_fxn = function (error) {
-            $rootScope.alert = errs.showError(error, "Error");
+            $scope.alert = errs.showError(error, "Error");
         };
 
         self.bookTrip = function (index) {

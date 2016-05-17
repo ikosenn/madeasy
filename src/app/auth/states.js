@@ -21,7 +21,7 @@
                 },
                 parent: "auth_base",
                 url: "/login/?reset_password&" +
-                    "reset_password_confirm&change_pwd&timeout",
+                    "reset_password_confirm&change_pwd&timeout&new_user",
                 views:{
                     "form":{
                         controller: "madeasy.auth.controllers.loginAuth",
