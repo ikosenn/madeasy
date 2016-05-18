@@ -8,6 +8,9 @@
     .config(["$stateProvider", function config($stateProvider) {
         $stateProvider
             .state("admin", {
+                data: {
+                    actions: "view.admin"
+                },
                 ncyBreadcrumb: {
                     label: "admin"
                 },
@@ -20,6 +23,9 @@
                     }
                 }
             }).state("admin.parser_correctness", {
+                data: {
+                    actions: "view.admin"
+                },
                 ncyBreadcrumb: {
                     label: "parser correctness"
                 },
@@ -34,6 +40,9 @@
                     }
                 }
             }).state("admin.parser_response_day", {
+                data: {
+                    actions: "view.admin"
+                },
                 ncyBreadcrumb: {
                     label: "parser response  day"
                 },

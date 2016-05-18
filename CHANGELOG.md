@@ -20,3 +20,7 @@ CHANGELOG
 ## 0.0.5 - 2016-05-17
 ###
 - Add show my booked flights command UI
+
+## 0.0.5 - 2016-05-18
+###
+- Add permissions for the admin area
