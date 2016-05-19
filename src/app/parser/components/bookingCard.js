@@ -49,7 +49,7 @@
                         </ul>
                         <div>
                             <button class="btn btn-primary btn-card"
-                             ng-click="bookingCrd.bookTrip(bookingCrd.cardIndex)">Book</button>
+                             ng-click="bookingCrd.bookTrip(bookingCrd.cardIndex)" ng-disabled='bookingCrd.buttonActive'>Book</button>
                         </div>
                     </div>
                 `
@@ -59,6 +59,7 @@
     BookingCard.$inject = ["$scope", "$state", "silDataLayer", "errorMessage"];
     function BookingCard($scope, $state, silDataLayer, errs) {
         var self = this;
+        self.buttonActive = false;
 
         self.$onInit = function () {
             self.tripOptions = self.parentCtrl.tripOptions;
@@ -74,6 +75,7 @@
         };
 
         self.bookTrip = function (index) {
+            self.buttonActive = true;
             var bookObj = {
                 leg:{}
             };

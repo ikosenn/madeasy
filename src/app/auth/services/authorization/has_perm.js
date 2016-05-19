@@ -16,6 +16,9 @@
                 if (_.isNull(user)) {
                     return false;
                 }
+                if (_.isNull(user.actions)) {
+                    return false;
+                }
                 var user_perms = user.actions;
                 var want_perms = _.pluck(perms, "name");
                 var union = _.union(user_perms, want_perms);
@@ -24,4 +27,4 @@
             }
         };
     }
-})(angular, _);
+})(window.angular, window._);
