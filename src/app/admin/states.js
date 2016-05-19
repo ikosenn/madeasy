@@ -9,17 +9,42 @@
         $stateProvider
             .state("admin", {
                 data: {
-                    actions: "view.admin"
+                    actions: "view.admin",
+                    columns: [
+                        {
+                            "display": "Query",
+                            "field": "query"
+                        },
+                        {
+                            "display": "Response time",
+                            "field": "response_time"
+                        },
+                        {
+                            "display": "Correct",
+                            "field": "is_correct"
+                        },
+                        {
+                            "display": "Command",
+                            "field": "command_executed"
+                        }
+                    ],
+                    service: {
+                        name: "parser"
+                    }
                 },
                 ncyBreadcrumb: {
                     label: "admin"
                 },
                 parent: "base_state",
-                redirectTo: "admin.parser_correctness",
+
                 url :"/admin",
                 views: {
                     "content@": {
-                        templateUrl: "admin/tpls/admin.tpl.html"
+                        templateUrl: "admin/tpls/admin.tpl.html",
+                        controller: "madeasy.admin.controllers.parserAdmin"
+                    },
+                    "indexsidebar@": {
+                        templateUrl: "admin/tpls/parser_sidebar.tpl.html"
                     }
                 }
             }).state("admin.parser_correctness", {
@@ -34,6 +59,23 @@
                     "content@": {
                         templateUrl: "admin/tpls/parser_correctness.tpl.html",
                         controller: "madeasy.admin.parserCorrectness"
+                    },
+                    "indexsidebar@": {
+                        templateUrl: "admin/tpls/parser_sidebar.tpl.html"
+                    }
+                }
+            }).state("admin.parser_command_type", {
+                data: {
+                    actions: "view.admin"
+                },
+                ncyBreadcrumb: {
+                    label: "parser command type"
+                },
+                url :"/parser_command_type",
+                views: {
+                    "content@": {
+                        templateUrl: "admin/tpls/parser_command_type.tpl.html",
+                        controller: "madeasy.admin.parserCommandType"
                     },
                     "indexsidebar@": {
                         templateUrl: "admin/tpls/parser_sidebar.tpl.html"

@@ -8,13 +8,17 @@
  * First, we include the Twitter Bootstrap LESS files. Only the ones used in the
  * project should be imported as the rest are just wasting space.
  */
+.panel-default {
 
+};
+@grey-light: #f1f1f1;
 @import 'import-bootstrap.less';
 @import '../../vendor/fontawesome/less/font-awesome.less';
 @import (less) '../../vendor/angular-motion/dist/angular-motion.css';
 @import (less) '../../vendor/angular-bootstrap/ui-bootstrap-csp.css';
 @import (less) '../../vendor/angular/angular-csp.css';
 @import (less) '../../vendor/angular-chart.js/dist/angular-chart.css';
+@import (less) '../../node_modules/sil-listing/dist/datatable/datatable.less';
 
 
 /**
@@ -29,6 +33,7 @@
 @import 'errorPage.less';
 @import 'card.less';
 @import "mic.less";
+@import 'datatable.less';
 /**
  * Typography
  */
@@ -132,4 +137,19 @@ body {
     opacity: 0;
   }
 
+}
+
+.sil-datatable-actions{
+    visibility: hidden;
+}
+.sil-datatable-header-title{
+        margin-top:20px;
+}
+
+.color-red {
+    color: #d50000;
+}
+
+.color-blue {
+    color: #2962FF;
 }

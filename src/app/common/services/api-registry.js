@@ -28,5 +28,17 @@
         silDataStoreFactory("users", {
             url: SERVER_URL + "/api/auth/create_user/"
         });
+
+        silDataStoreFactory("parser", {
+            url: SERVER_URL + "/api/parser/parser_results/"
+        });
+
+        silDataStoreFactory("parser_numbers", {
+            url: SERVER_URL + "/api/parser/parser_results/parser_numbers/"
+        });
+
+        silDataStoreFactory("parser_command_type", {
+            url: SERVER_URL + "/api/parser/parser_results/parser_command_type/"
+        });
     }
 })(window.angular);
